@@ -1,7 +1,7 @@
 export const Sidebar = () => {
   return (
-    <div>
-      <div>
+    <div className="bg-slate-400">
+      <div >
         <div className="flex items-center">
           <div className="p-2">
             <img src="/1.png" className="w-20 h-20 rounded-md" />

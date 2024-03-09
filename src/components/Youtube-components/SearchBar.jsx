@@ -2,14 +2,14 @@ export const SearchBar = () => {
   return (
     <div>
       <form>
-        <div className="w-96 flex border border-gray-500 rounded-3xl p-1 pl-3 text-sm pr-2">
+        <div className="flex flex-col w-full lg:96 sm:w-20 md:w-96 border border-gray-500 rounded-3xl p-1 pl-3 text-sm pr-2 sm:flex-row items-center">
           <input
             id="default-search"
             className="w-full bg-slate-950 text-white border-none outline-none"
             placeholder="Search"
             required
           />
-          <div className="rotate-90">
+          <div className="rotate-90 hidden sm:block">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"

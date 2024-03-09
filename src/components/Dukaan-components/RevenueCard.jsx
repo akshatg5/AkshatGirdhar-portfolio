@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 export const RevenueCard = ({ title, amount, orders }) => {
   return (
     <div className="bg-white rounded-md shadow-xl p-5 cursor-pointer m-5">
+      
       <div className="text-slate-500 flex">
         {title}
         <svg
@@ -24,7 +25,7 @@ export const RevenueCard = ({ title, amount, orders }) => {
         <div className="font-bold">₹ {amount}</div>
         <div>
           {orders ? (
-            <div className="flex font-medium items-center cursor-pointer underline text-blue-500" >
+            <div className="flex font-medium items-center cursor-pointer underline text-blue-500">
               {orders} order(s)
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -40,7 +41,6 @@ export const RevenueCard = ({ title, amount, orders }) => {
                   d="m8.25 4.5 7.5 7.5-7.5 7.5"
                 />
               </svg>
-              
             </div>
           ) : null}{" "}
         </div>
