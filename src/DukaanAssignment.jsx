@@ -1,3 +1,4 @@
+import { Appbar } from "./components/Dukaan-components/Appbar";
 import { RevenueCard } from "./components/Dukaan-components/RevenueCard";
 import { RevenueCardBlue } from "./components/Dukaan-components/RevenueCardHighlighted";
 import { Sidebar } from "./components/Dukaan-components/Sidebar";
@@ -7,6 +8,7 @@ export const DukaanAssignment = () => {
     <div className="flex">
       <Sidebar />
       <div className="flex-grow">
+      <Appbar />
         <div className="grid grid-cols-3">
           <RevenueCardBlue
             title={"Next Payout"}

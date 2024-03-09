@@ -1,6 +1,6 @@
 export const Sidebar = () => {
   return (
-    <div className="bg-slate-400">
+    <div className="bg-slate-400 h-screen">
       <div >
         <div className="flex items-center">
           <div className="p-2">
@@ -19,7 +19,7 @@ export const Sidebar = () => {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="w-6 h-6"
+              className="w-6 h-6 mr-2"
             >
               <path
                 strokeLinecap="round"
@@ -37,7 +37,7 @@ export const Sidebar = () => {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="w-6 h-6"
+              className="w-6 h-6 mr-2"
             >
               <path
                 strokeLinecap="round"
@@ -55,7 +55,7 @@ export const Sidebar = () => {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="w-6 h-6"
+              className="w-6 h-6 mr-2"
             >
               <path
                 strokeLinecap="round"
@@ -73,7 +73,7 @@ export const Sidebar = () => {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="w-6 h-6"
+              className="w-6 h-6 mr-2"
             >
               <path
                 strokeLinecap="round"
@@ -91,7 +91,7 @@ export const Sidebar = () => {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="w-6 h-6"
+              className="w-6 h-6 mr-2"
             >
               <path
                 strokeLinecap="round"
@@ -109,7 +109,7 @@ export const Sidebar = () => {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="w-6 h-6"
+              className="w-6 h-6 mr-2"
             >
               <path
                 strokeLinecap="round"
@@ -127,7 +127,7 @@ export const Sidebar = () => {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="w-6 h-6"
+              className="w-6 h-6 mr-2"
             >
               <path
                 strokeLinecap="round"
@@ -145,7 +145,7 @@ export const Sidebar = () => {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="w-6 h-6"
+              className="w-6 h-6 mr-2"
             >
               <path
                 strokeLinecap="round"
@@ -163,7 +163,7 @@ export const Sidebar = () => {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="w-6 h-6"
+              className="w-6 h-6 mr-2"
             >
               <path
                 strokeLinecap="round"
@@ -181,7 +181,7 @@ export const Sidebar = () => {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="w-6 h-6"
+              className="w-6 h-6 mr-2"
             >
               <path
                 strokeLinecap="round"
@@ -199,7 +199,7 @@ export const Sidebar = () => {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="w-6 h-6"
+              className="w-6 h-6 mr-2"
             >
               <path
                 strokeLinecap="round"
