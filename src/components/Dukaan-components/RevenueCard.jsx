@@ -22,7 +22,7 @@ export const RevenueCard = ({ title, amount, orders }) => {
         </svg>
       </div>
       <div className="flex justify-between mt-5">
-        <div className="font-bold">₹ {amount}</div>
+        <div className="font-semibold text-3xl">₹ {amount}</div>
         <div>
           {orders ? (
             <div className="flex font-medium items-center cursor-pointer underline text-blue-500">

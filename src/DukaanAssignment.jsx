@@ -9,6 +9,8 @@ export const DukaanAssignment = () => {
       <Sidebar />
       <div className="flex-grow">
       <Appbar />
+
+      <hr></hr>
         <div className="grid grid-cols-3">
           <RevenueCardBlue
             title={"Next Payout"}
