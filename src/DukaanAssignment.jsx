@@ -5,6 +5,7 @@ import { Overviewbar } from "./components/Dukaan-components/Overviewbar";
 import { RevenueCard } from "./components/Dukaan-components/RevenueCard";
 import { RevenueCardBlue } from "./components/Dukaan-components/RevenueCardHighlighted";
 import { Sidebar } from "./components/Dukaan-components/Sidebar";
+import { Table } from "./components/Dukaan-components/Table";
 import { Tablesearch } from "./components/Dukaan-components/Tablesearch";
 
 export const DukaanAssignment = () => {
@@ -43,7 +44,9 @@ export const DukaanAssignment = () => {
           <Button2 btnText={"Refunds (6)"} />
           </div>
         </div>
-        <Tablesearch />
+        <Tablesearch  />
+        <hr className="mt-4"></hr>
+        <Table />
       </div>
     </div>
   );

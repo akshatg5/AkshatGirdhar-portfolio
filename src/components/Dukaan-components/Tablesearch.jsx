@@ -1,6 +1,6 @@
 export const Tablesearch = () => {
   return (
-    <div className="flex pl-12 pt-4">
+    <div className="flex pl-12 pt-4 justify-between">
       <div class="w-96 h-10 rounded flex items-center border border-black-150">
         <div class="pl-4 pr-4">
           <svg
@@ -25,6 +25,43 @@ export const Tablesearch = () => {
             autocomplete="off"
           />
         </form>
+      </div>
+
+      <div className="flex mr-12">
+        <button className="h-10 border border-black-150 pl-4 pr-4 flex items-center rounded-md">
+          <p>Sort</p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-6 h-6 pl-2"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M3 7.5 7.5 3m0 0L12 7.5M7.5 3v13.5m13.5 0L16.5 21m0 0L12 16.5m4.5 4.5V7.5"
+            />
+          </svg>
+        </button>
+      
+        <button className="h-10 border border-black-150 pl-4 pr-4 flex items-center rounded-md ml-4">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-6 h-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
+            />
+          </svg>
+        </button>
       </div>
     </div>
   );
