@@ -8,7 +8,7 @@ export const DisplayCard = ({
   githubLink,
 }) => {
   return (
-    <div class="w-[300px] h-[400px] rounded-md border m-4 ">
+    <div class="w-[300px] h-[400px] rounded-md border m-4 flex flex-col justify-between">
       <div>
         <Link to={link}>
           <img
