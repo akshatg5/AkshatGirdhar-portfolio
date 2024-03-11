@@ -8,6 +8,7 @@ export const LandingPage = () => {
     {
       link: "/youtubeClone",
       displayImg: "/youtube-logo.jpg",
+      category : "Frontend",
       projectTitle: "Youtube Clone",
       projectDescription: "Youtube Clone made using ReactJS and Tailwind CSS",
       githubLink: "https://github.com/akshatg5/Frontend-projects/tree/main/src/components/Youtube-components"
@@ -15,10 +16,18 @@ export const LandingPage = () => {
     {
       link: "/dukaanAssignment",
       displayImg: "/dukaanImg.png",
+      category : "Frontend",
       projectTitle: "Dukaan Assignment",
       projectDescription: "Dukaan Assignment given by Dukaan App : https://twitter.com/mydukaanapp. Made using ReactJS and Tailwind",
       githubLink: "https://github.com/akshatg5/Frontend-projects/tree/main/src/components/Dukaan-components"
-    }
+    },
+    {
+      link: "https://artoflearninginstitute.com/",
+      displayImg: "/yogaWebsite.png",
+      category : "Full Stack",
+      projectTitle: "Art of Learning Institute",
+      projectDescription: "A website made for art of learning institute, Mumbai. For the frontend we used ReactJS and for the backend we used the headless Sanity CMS"
+    },
   ];
 
   return (
@@ -30,6 +39,7 @@ export const LandingPage = () => {
             key={index}
             link={project.link}
             displayImg={project.displayImg}
+            category={project.category}
             projectTitle={project.projectTitle}
             projectDescription={project.projectDescription}
             githubLink={project.githubLink}

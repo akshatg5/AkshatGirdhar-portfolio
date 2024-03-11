@@ -3,12 +3,13 @@ import { Link } from "react-router-dom";
 export const DisplayCard = ({
   link,
   displayImg,
+  category,
   projectTitle,
   projectDescription,
   githubLink,
 }) => {
   return (
-    <div class="w-[300px] h-[400px] rounded-md border m-4 flex flex-col justify-between">
+    <div class="w-[300px] h-[450px] rounded-md border m-4 flex flex-col">
       <div>
         <Link to={link}>
           <img
@@ -19,10 +20,19 @@ export const DisplayCard = ({
         </Link>
       </div>
 
-      <div class="p-4">
+      <div class="p-4 flex flex-col justify-between h-full">
+      <div>
         <h1 class="text-lg text-white font-semibold">{projectTitle}</h1>
-        <p class="mt-3 text-sm text-gray-600">{projectDescription}</p>
-        <div className="buttons-div flex justify-between">
+      </div>
+      <div>
+        <p class="mt-3 text-sm text-gray-400">{projectDescription}</p>
+      </div>
+      <div>
+        <h1 className="mt-3 text-sm text-gray-400">{category}</h1>
+      </div>
+
+        <div className="buttons-div flex justify-between mt-auto">
+
           <div>
             <Link to={link}>
               <button
@@ -34,7 +44,7 @@ export const DisplayCard = ({
             </Link>
           </div>
           <div>
-            <Link to={githubLink}>
+          {githubLink ? <Link to={githubLink}>
               <button className="mt-4 rounded-sm bg-blue-400 px-2.5 py-1 text-md font-semibold text-white shadow-sm hover:bg-blue-800/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -48,7 +58,8 @@ export const DisplayCard = ({
                   />
                 </svg>
               </button>
-            </Link>
+            </Link> : null }
+            
           </div>
         </div>
       </div>
