@@ -28,6 +28,14 @@ export const LandingPage = () => {
       projectTitle: "Art of Learning Institute",
       projectDescription: "A website made for art of learning institute, Mumbai. For the frontend we used ReactJS and for the backend we used the headless Sanity CMS"
     },
+    {
+      link: "https://www.youtube.com/playlist?list=PLqv3LXavHm2t1BZtwKnypAAqc8KFl2F64",
+      displayImg: "/CS50Projects.png",
+      category : "Full Stack",
+      projectTitle: "CS50 Projects",
+      projectDescription: "A collection of web development projects built as a part of the course CS50.Technologies used include frameworks like Flask and Django.",
+      githubLink : "https://github.com/akshatg5/FootballClubz-Django/tree/master"
+    },
   ];
 
   return (
