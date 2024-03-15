@@ -36,6 +36,13 @@ export const LandingPage = () => {
       projectDescription: "A collection of web development projects built as a part of the course CS50.Technologies used include frameworks like Flask and Django.",
       githubLink : "https://github.com/akshatg5/FootballClubz-Django/tree/master"
     },
+    {
+      link: "https://cash-flow-alpha.vercel.app/",
+      displayImg: "/CashFlow.png",
+      category : "Full Stack",
+      projectTitle: "CashFlow",
+      projectDescription: "CashFlow: Send & receive money instantly with friends & family. Secure P2P app built with ReactJS, ExpressJS, MongoDB & TailwindCSS. Deployed on Vercel."
+    },
   ];
 
   return (
