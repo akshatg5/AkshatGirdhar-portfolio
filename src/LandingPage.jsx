@@ -46,21 +46,21 @@ export const LandingPage = () => {
   ];
 
   return (
-    <div className="bg-black h-screen w-screen justify-center">
-      <div className="flex justify-center items-center align-middle">
-        {/* Mapping over the projects array to render DisplayCard for each project */}
-        {projects.map((project, index) => (
-          <DisplayCard
-            key={index}
-            link={project.link}
-            displayImg={project.displayImg}
-            category={project.category}
-            projectTitle={project.projectTitle}
-            projectDescription={project.projectDescription}
-            githubLink={project.githubLink}
-          />
-        ))}
-      </div>
+    <div className="bg-black h-auto w-screen">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center items-center align-middle p-4">
+      {/* Mapping over the projects array to render DisplayCard for each project */}
+      {projects.map((project, index) => (
+        <DisplayCard
+          key={index}
+          link={project.link}
+          displayImg={project.displayImg}
+          category={project.category}
+          projectTitle={project.projectTitle}
+          projectDescription={project.projectDescription}
+          githubLink={project.githubLink}
+        />
+      ))}
     </div>
+  </div>
   );
 };
