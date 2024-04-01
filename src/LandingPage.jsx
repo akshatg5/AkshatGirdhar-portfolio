@@ -43,6 +43,13 @@ export const LandingPage = () => {
       projectTitle: "CashFlow",
       projectDescription: "CashFlow: Send & receive money instantly with friends & family. Secure P2P app built with ReactJS, ExpressJS, MongoDB & TailwindCSS. Deployed on Vercel."
     },
+    {
+      link: "https://buildershub.vercel.app/",
+      displayImg: "/buildersHub.png",
+      category : "Full Stack",
+      projectTitle: "Builders Hub",
+      projectDescription: "Builders Hub is a collaborative community where builders come together to work on projects from start to finish, fostering innovation and teamwork. Our platform facilitates seamless collaboration, enabling members to share ideas, expertise, and resources to create impactful solutions."
+    },
   ];
 
   return (
