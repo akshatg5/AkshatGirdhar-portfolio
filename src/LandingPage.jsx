@@ -48,7 +48,7 @@ export const LandingPage = () => {
       displayImg: "/buildersHub.png",
       category : "Full Stack",
       projectTitle: "Builders Hub",
-      projectDescription: "Builders Hub is a collaborative community where builders come together to work on projects from start to finish, fostering innovation and teamwork. Our platform facilitates seamless collaboration, enabling members to share ideas, expertise, and resources to create impactful solutions."
+      projectDescription: "Builders Hub is a collaborative community where builders come together to work on projects from start to finish, fostering innovation and teamwork."
     },
   ];
 
