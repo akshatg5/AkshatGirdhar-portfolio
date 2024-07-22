@@ -41,14 +41,32 @@ export const LandingPage = () => {
       displayImg: "/CashFlow.png",
       category : "Full Stack",
       projectTitle: "CashFlow",
-      projectDescription: "CashFlow: Send & receive money instantly with friends & family. Secure P2P app built with ReactJS, ExpressJS, MongoDB & TailwindCSS. Deployed on Vercel."
+      projectDescription: "CashFlow: Send & receive money instantly with friends & family. Secure P2P app built with ReactJS, ExpressJS, MongoDB & TailwindCSS. Deployed on Vercel.",
+      githubLink:"https://github.com/akshatg5/CashFlow"
     },
     {
       link: "https://buildershub.vercel.app/",
       displayImg: "/buildersHub.png",
       category : "Full Stack",
       projectTitle: "Builders Hub",
-      projectDescription: "Builders Hub is a collaborative community where builders come together to work on projects from start to finish, fostering innovation and teamwork."
+      projectDescription: "Builders Hub is a collaborative community where builders come together to work on projects from start to finish, fostering innovation and teamwork.",
+      githubLink:"https://github.com/khardikk/Builders_hub"
+    },
+    {
+      link: "https://temflo.vercel.app/",
+      displayImg: "/temflo.png",
+      category : "Full Stack",
+      projectTitle: "Temflo Website",
+      projectDescription: "A website made for Temflo Systems Pvt. Ltd. as a freelance project. For the frontend we used React + typescript, for the backend we used Sanity CMS."
+    },
+    {
+      link: "https://penpoint.vercel.app/",
+      displayImg: "/penpoint.png",
+      category : "Full Stack",
+      projectTitle: "Pen Point",
+      projectDescription: "A blogging platform for budding creators. Tech stack used is cloudflare workers,Hono,React+typescript,PostgreSQL",
+      githubLink : "https://github.com/akshatg5/Pen-Point"
+
     },
   ];
 
