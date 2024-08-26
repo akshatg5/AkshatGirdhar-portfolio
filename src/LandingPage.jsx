@@ -66,7 +66,14 @@ export const LandingPage = () => {
       projectTitle: "Pen Point",
       projectDescription: "A blogging platform for budding creators. Tech stack used is cloudflare workers,Hono,React+typescript,PostgreSQL",
       githubLink : "https://github.com/akshatg5/Pen-Point"
-
+    },
+    {
+      link: "https://mediabyte.vercel.app/",
+      displayImg: "/MediabyteSS.png",
+      category : "Full Stack",
+      projectTitle: "MediaByte",
+      projectDescription: "A NextJs web app, connected with cloudinary APIs giving the users the ability to play with their images and videos. Go check it out! Uses PostgreSQL as a database and deployed on Vercel, frontend is Nextjs and Tailwind CSS.",
+      githubLink : "https://github.com/akshatg5/MediaByte"
     },
   ];
 
