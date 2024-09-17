@@ -10,7 +10,7 @@ export default function Home() {
         <h1 className="text-5xl font-extrabold text-center text-white mb-4">
           Akshat Girdhar
         </h1>
-        <h2 className="text-3xl font-bold text-center text-black mb-8">
+        <h2 className="text-3xl font-bold text-center text-neutral-400 mb-8">
           Full Stack Web Developer
         </h2>
         <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">

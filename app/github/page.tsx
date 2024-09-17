@@ -72,7 +72,7 @@ export default function GitHub() {
           <div>
             <h2 className="text-2xl font-semibold mb-2">{userData.name}</h2>
             <p className="text-gray-400 mb-4">{userData.bio}</p>
-            <div className="flex space-x-4 text-sm text-gray-200 max-sm:text-[0.6rem]">
+            <div className="flex space-x-4 text-sm text-gray-200 max-sm:text-[0.5rem]">
               <span>{userData.public_repos} repositories</span>
               <span>{userData.followers} followers</span>
               <span>{userData.following} following</span>
