@@ -12,60 +12,59 @@ export function AppleCardsCarouselDemo() {
   ));
 
   return (
-    <div className="w-full h-full py-8">
-      <h2 className="max-w-7xl pl-4 mx-auto text-xl md:text-5xl font-bold text-white dark:text-neutral-200 font-sans">
-        Proof of work:
+    <div className="w-full h-full py-8 max-sm:pt-8 max-sm:pb-0">
+      <h2 className="max-w-7xl pl-4 mx-auto text-2xl font-bold text-white dark:text-neutral-200 font-sans">
+          What I've built: 
       </h2>
       <Carousel items={cards} />
     </div>
   );
 }
+const ResponsiveContent = ({ children } : {children:any}) => (
+  <div className="w-full max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    {children}
+  </div>
+);
 
-const DummyContent = () => {
-  return (
-    <>
-      {[...new Array(3).fill(1)].map((_, index) => {
-        return (
-          <div
-            key={"dummy-content" + index}
-            className="bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4"
-          >
-            <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
-              <span className="font-bold text-neutral-700 dark:text-neutral-200">
-                The first rule of Apple club is that you boast about Apple club.
-              </span>{" "}
-              Keep a journal, quickly jot down a grocery list, and take amazing
-              class notes. Want to convert those notes to text? No problem.
-              Langotiya jeetu ka mara hua yaar is ready to capture every
-              thought.
-            </p>
-            <Image
-              src="https://assets.aceternity.com/macbook.png"
-              alt="Macbook mockup from Aceternity UI"
-              height="500"
-              width="500"
-              className="md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain"
-            />
-          </div>
-        );
-      })}
-    </>
-  );
-};
+const ResponsiveLink = ({ href, children } : {href :any,children:any}) => (
+  <Link href={href} className="text-blue-500 hover:underline block text-center sm:text-left mb-4">
+    {children}
+  </Link>
+);
 
-const data = [
+const ResponsiveTweet = ({ tweetId }:{tweetId:string}) => (
+  <div className="w-full max-w-md mx-auto">
+    <TwitterTweetEmbed tweetId={tweetId} />
+  </div>
+);
+
+const ResponsiveIframe = ({ src, height, width, title } : {src:any,height:any,width:any,title:string}) => (
+  <div className="aspect-w-16 aspect-h-9 w-full max-w-2xl mx-auto">
+    <iframe
+      src={src}
+      height={height}
+      width={width}
+      frameBorder="0"
+      allowFullScreen
+      title={title}
+      className="w-full h-full"
+    />
+  </div>
+);
+
+export const data = [
   {
     category: "Built a platform for group playlists!",
     title: "VoteTube",
     link: "https://votetube.vercel.app/",
     src: "/Votetube1.png",
     content: (
-      <div className="flex justify-center border border-black-2">
-        <Link href={"https://votetube.vercel.app/"}>
-          <h2>VoteTube Demo</h2>
-        </Link>
-        <TwitterTweetEmbed tweetId={"1834593052633301184"} />
-      </div>
+      <ResponsiveContent>
+        <ResponsiveLink href="https://votetube.vercel.app/">
+          <h2 className="text-xl font-bold mb-4">VoteTube Demo</h2>
+        </ResponsiveLink>
+        <ResponsiveTweet tweetId="1834593052633301184" />
+      </ResponsiveContent>
     ),
   },
   {
@@ -73,30 +72,13 @@ const data = [
     category: "Media handling service with UI generator using Gemini.",
     link: "https://mediabyte.vercel.app/",
     src: "/Mediabyte1.png",
-    content: <div className="flex justify-center border border-black-2">
-    <Link href={"https://votetube.vercel.app/"}>
-      <h2>Mediabyte Demo</h2>
-    </Link>
-    <TwitterTweetEmbed tweetId={"1827613215502823494"} />
-  </div>
-  },
-  {
-    title: "Builders Hub",
-    category: "Builders Hub is a collaborative community where builders come together to work on projects from start to finish, fostering innovation and teamwork.",
-    link: "https://buildershub.vercel.app/",
-    src: "/buildersHub.png",
     content: (
-        <div>
-        <iframe
-          src="https://www.linkedin.com/embed/feed/update/urn:li:share:7194200424168472577"
-          height="444"
-          width="504"
-          frameBorder="0"
-          allowFullScreen
-          title="Embedded post"
-          style={{ border: 'none', overflow: 'hidden' }}
-        ></iframe>
-      </div>
+      <ResponsiveContent>
+        <ResponsiveLink href="https://mediabyte.vercel.app/">
+          <h2 className="text-xl font-bold mb-4">Mediabyte Demo</h2>
+        </ResponsiveLink>
+        <ResponsiveTweet tweetId="1827613215502823494" />
+      </ResponsiveContent>
     ),
   },
   {
@@ -105,10 +87,10 @@ const data = [
     link: "https://penpoint.vercel.app/",
     src: "/Penpoint1.png",
     content: (
-      <div className="flex justify-center border border-black-2">
-        <h2>Penpoint Demo</h2>
-        <TwitterTweetEmbed tweetId={"1816554728760959140"} />
-      </div>
+      <ResponsiveContent>
+        <h2 className="text-xl font-bold mb-4 text-center sm:text-left">Penpoint Demo</h2>
+        <ResponsiveTweet tweetId="1816554728760959140" />
+      </ResponsiveContent>
     ),
   },
   {
@@ -117,42 +99,58 @@ const data = [
     category: "Internship project",
     src: "/TeamPromotions1.png",
     content: (
-      <div>
-        <h1>Internship Project</h1>
-        <h2>Oct 2023 - Mar 2024 · 6 months</h2>
-        <div>
-          <h2>Project Overview:</h2>
-          <p>
+      <ResponsiveContent >
+        <h1 className="text-2xl text-black font-bold mb-2 text-center sm:text-left">Internship Project</h1>
+        <h2 className="text-xl mb-4 text-black text-center sm:text-left">Oct 2023 - Mar 2024 · 6 months</h2>
+        <div className="space-y-4">
+          <h2 className="text-lg text-black font-semibold">Project Overview:</h2>
+          <p className="text-sm sm:text-base text-black">
             As part of the Tech Team at Team Promotions, we enhanced the
             website's interface. Worked on the UI as well as on the blog feature
             to help Admins to easily update company activities. We've developed
             a user-friendly Content Management System (CMS) using Django and
             integrated a newsletter feature for regular updates.
           </p>
-          <h2>Key Features:</h2>
-          <ul>
+          <h2 className="text-lg font-semibold text-black">Key Features:</h2>
+          <ul className="list-disc text-black list-inside text-sm sm:text-base">
             <li>HTML,CSS,Javascript</li>
             <li>Django CMS</li>
-          </ul>{" "}
+          </ul>
         </div>
-      </div>
+      </ResponsiveContent>
+    ),
+  },
+  {
+    title: "Builders Hub",
+    category: "Collaborative project-building community fostering innovation and teamwork",
+    link: "https://buildershub.vercel.app/",
+    src: "/buildersHub.png",
+    content: (
+      <ResponsiveContent>
+        <ResponsiveIframe
+          src="https://www.linkedin.com/embed/feed/update/urn:li:share:7194200424168472577"
+          height="684"
+          width="504"
+          title="Builders Hub LinkedIn Post"
+        />
+      </ResponsiveContent>
     ),
   },
   {
     title: "Temflo Pvt Ltd. Website",
-    link : "https://www.temflo.co.in/",
+    link: "https://www.temflo.co.in/",
     category: "Freelance project for Temflo Pvt. Ltd.",
     src: "/Temflo1.png",
-    content: <div>
-    <iframe
-      src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7230140304245317633"
-      height="961"
-      width="504"
-      allowFullScreen
-      title="Embedded post"
-      style={{ border: 'none', overflow: 'hidden' }}
-    ></iframe>
-  </div>,
+    content: (
+      <ResponsiveContent>
+        <ResponsiveIframe
+          src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7230140304245317633"
+          height="961"
+          width="504"
+          title="Temflo Pvt Ltd Website LinkedIn Post"
+        />
+      </ResponsiveContent>
+    ),
   },
   {
     title: "Cash Flow",
@@ -160,9 +158,18 @@ const data = [
     link: "https://penpoint.vercel.app/",
     src: "/CashFlow.png",
     content: (
-      <div className="flex justify-center border border-black-2">
-        <Image src={'/CashFlow.png'} alt="Screenshot" width={200} height={220} />
-      </div>
+      <ResponsiveContent>
+        <div className="flex justify-center">
+          <Image 
+            src='/CashFlow.png' 
+            alt="Screenshot" 
+            width={200} 
+            height={220} 
+            layout="responsive"
+            className="max-w-full h-auto"
+          />
+        </div>
+      </ResponsiveContent>
     ),
   },
 ];

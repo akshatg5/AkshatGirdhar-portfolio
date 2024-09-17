@@ -16,7 +16,6 @@ export function Appbar() {
       ),
       href: "/",
     },
-
     {
       title: "Projects",
       icon: (
@@ -27,29 +26,30 @@ export function Appbar() {
     {
       title: "Resume",
       icon: (
-        <PaperclipIcon className=" text-black dark:text-neutral-300" />
+        <PaperclipIcon className="text-black dark:text-neutral-300" />
       ),
       href: "/resume",
     },
     {
       title: "GitHub",
       icon: (
-        <IconBrandGithub className=" text-black dark:text-neutral-300" />
+        <IconBrandGithub className="text-black dark:text-neutral-300" />
       ),
       href: "/github",
     },
     {
       title: "LinkedIn",
       icon: (
-        <LinkedinIcon className=" text-black dark:text-neutral-300" />
+        <LinkedinIcon className="text-black dark:text-neutral-300" />
       ),
       href: "https://www.linkedin.com/in/akshat-girdhar-56a848206/",
     },
   ];
+
   return (
-      <div className="flex flex-col justify-end">
+    <div className="fixed bottom-0 left-0 right-0 flex justify-center p-4 sm:p-6">
       <FloatingDock
-        mobileClassName="translate-y-80" // only for demo, remove for production
+        mobileClassName="sm:translate-y-0"
         items={links}
       />
     </div>

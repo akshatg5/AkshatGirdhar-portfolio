@@ -18,10 +18,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} flex flex-col min-h-screen `}>
-        <main className="flex-grow bg-gradient-to-br from-slate-950 via-blue-700 to-neutral-300 text-white pb-20">{children}</main>
-        <div className="fixed bottom-8 left-0 right-0 z-50">
+    <html lang="en" className="h-full">
+      <body className={`${inter.className} flex flex-col h-full`}>
+        <main className="flex-grow bg-gradient-to-br from-slate-950 via-blue-700 to-neutral-300 text-white pb-20 sm:pb-24 px-4 sm:px-6 lg:px-8">
+          {children}
+        </main>
+        <div className="fixed bottom-0 left-0 right-0 z-50 pb-2 sm:pb-4 px-2 sm:px-4">
           <Appbar />
         </div>
       </body>
