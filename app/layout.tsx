@@ -8,8 +8,8 @@ import { Appbar } from "./components/Navbar"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Web Developer Portfolio",
-  description: "Portfolio website showcasing my web development projects",
+  title: "Akshat Girdhar",
+  description: "Portfolio website showcasing Akshat Girdhar's work!",
 }
 
 export default function RootLayout({
