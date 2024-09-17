@@ -5,7 +5,7 @@ import {
   IconBrandGithub,
   IconHome,
 } from "@tabler/icons-react";
-import { LucideLaptop, PaperclipIcon } from "lucide-react";
+import { LinkedinIcon, LucideLaptop, PaperclipIcon } from "lucide-react";
 
 export function Appbar() {
   const links = [
@@ -37,6 +37,13 @@ export function Appbar() {
         <IconBrandGithub className=" text-black dark:text-neutral-300" />
       ),
       href: "/github",
+    },
+    {
+      title: "LinkedIn",
+      icon: (
+        <LinkedinIcon className=" text-black dark:text-neutral-300" />
+      ),
+      href: "https://www.linkedin.com/in/akshat-girdhar-56a848206/",
     },
   ];
   return (

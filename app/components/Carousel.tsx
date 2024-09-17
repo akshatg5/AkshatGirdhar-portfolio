@@ -73,7 +73,12 @@ const data = [
     category: "Media handling service with UI generator using Gemini.",
     link: "https://mediabyte.vercel.app/",
     src: "/Mediabyte1.png",
-    content: <DummyContent />,
+    content: <div className="flex justify-center border border-black-2">
+    <Link href={"https://votetube.vercel.app/"}>
+      <h2>Mediabyte Demo</h2>
+    </Link>
+    <TwitterTweetEmbed tweetId={"1827613215502823494"} />
+  </div>
   },
   {
     title: "Builders Hub",
