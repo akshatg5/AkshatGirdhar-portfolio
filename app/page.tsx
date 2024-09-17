@@ -11,11 +11,8 @@ export default function Home() {
           Akshat Girdhar
         </h1>
         <h2 className="text-3xl font-bold text-center text-neutral-400 mb-8">
-          Full Stack Web Developer
+        I can build full stack web applications.
         </h2>
-        <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
-          I can build full stack web applications.
-        </p>
         <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
           <Link 
             href="mailto:akshatgirdhar05@gmail.com" 
