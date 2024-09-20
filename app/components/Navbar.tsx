@@ -49,7 +49,7 @@ export function Appbar() {
       icon: (
         <Twitter className="text-black dark:text-neutral-300" />
       ),
-      href: "https:/x.com/AkshatGirdhar2",
+      href: "https://x.com/AkshatGirdhar2",
     },
   ];
 
