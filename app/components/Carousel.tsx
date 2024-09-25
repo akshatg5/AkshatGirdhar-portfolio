@@ -82,6 +82,20 @@ export const data = [
     ),
   },
   {
+    title: "LiteKite",
+    category: "Platform for buying and selling stocks, tracking your portfolio, and managing your finances.",
+    link: "https://litekite.vercel.app/",
+    src: "/Litekite.png",
+    content: (
+      <ResponsiveContent>
+        <ResponsiveLink href="https://litekite.vercel.app/">
+          <h2 className="text-xl font-bold mb-4">Litekite Demo</h2>
+        </ResponsiveLink>
+        <ResponsiveTweet tweetId="1838964058340684195" />
+      </ResponsiveContent>
+    ),
+  },
+  {
     title: "Pen Point",
     category: "Blogging app made using Hono,React,Postgres,Tailwind",
     link: "https://penpoint.vercel.app/",
