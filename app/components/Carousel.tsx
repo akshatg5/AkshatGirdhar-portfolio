@@ -14,31 +14,44 @@ export function AppleCardsCarouselDemo() {
   return (
     <div className="w-full h-full py-8 max-sm:pt-8 max-sm:pb-0">
       <h2 className="max-w-7xl pl-4 mx-auto text-4xl font-bold text-white dark:text-neutral-200 font-sans">
-          Proof Of Work :  
+        Proof Of Work :
       </h2>
       <Carousel items={cards} />
     </div>
   );
 }
-const ResponsiveContent = ({ children } : {children:any}) => (
+const ResponsiveContent = ({ children }: { children: any }) => (
   <div className="w-full max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
     {children}
   </div>
 );
 
-const ResponsiveLink = ({ href, children } : {href :any,children:any}) => (
-  <Link href={href} className="text-blue-500 hover:underline block text-center sm:text-left mb-4">
+const ResponsiveLink = ({ href, children }: { href: any; children: any }) => (
+  <Link
+    href={href}
+    className="text-blue-500 hover:underline block text-center sm:text-left mb-4"
+  >
     {children}
   </Link>
 );
 
-const ResponsiveTweet = ({ tweetId }:{tweetId:string}) => (
+const ResponsiveTweet = ({ tweetId }: { tweetId: string }) => (
   <div className="w-full max-w-md mx-auto">
     <TwitterTweetEmbed tweetId={tweetId} />
   </div>
 );
 
-const ResponsiveIframe = ({ src, height, width, title } : {src:any,height:any,width:any,title:string}) => (
+const ResponsiveIframe = ({
+  src,
+  height,
+  width,
+  title,
+}: {
+  src: any;
+  height: any;
+  width: any;
+  title: string;
+}) => (
   <div className="aspect-w-16 aspect-h-9 w-full max-w-2xl mx-auto">
     <iframe
       src={src}
@@ -83,7 +96,8 @@ export const data = [
   },
   {
     title: "LiteKite",
-    category: "Platform for buying and selling stocks, tracking your portfolio, and managing your finances.",
+    category:
+      "Platform for buying and selling stocks, tracking your portfolio, and managing your finances.",
     link: "https://litekite.vercel.app/",
     src: "/Litekite.png",
     content: (
@@ -102,8 +116,47 @@ export const data = [
     src: "/Penpoint1.png",
     content: (
       <ResponsiveContent>
-        <h2 className="text-xl font-bold mb-4 text-center sm:text-left">Penpoint Demo</h2>
+        <h2 className="text-xl font-bold mb-4 text-center sm:text-left">
+          Penpoint Demo
+        </h2>
         <ResponsiveTweet tweetId="1816554728760959140" />
+      </ResponsiveContent>
+    ),
+  },
+  {
+    title: "Real time-2WayDatabaseSync",
+    category: "A real time database to google sheet data sync project.",
+    link: "https://www.youtube.com/watch?v=QF8fAHYLglo",
+    src: "/DBsync.png",
+    content: (
+      <ResponsiveContent>
+        <h1 className="text-2xl text-black font-bold mb-2 text-center sm:text-left">
+          Real Time 2 Way DB sync
+        </h1>
+        <div className="space-y-4">
+          <h2 className="text-lg text-black font-semibold">
+            Project Overview:
+          </h2>
+          <p className="text-sm sm:text-base text-black">
+            Created a Nodejs server that is connected to the google sheets
+            webhook as well as a postgresDB, the server listens to any event
+            that occurs on the database and syncs the google sheet in real time
+            to the same. Similarly, using the onEdit trigger for the google
+            sheets, the google sheet listens to any edit event that is occuring
+            on the google sheet side, these changes are also synced with the
+            database.
+          </p>
+          <h2 className="text-lg font-semibold text-black">Key Features:</h2>
+          <ul className="list-disc text-black list-inside text-sm sm:text-base">
+            <li>NodeJS</li>
+            <li>Typescript</li>
+            <li>PostgreSQL</li>
+            <li>React frontend</li>
+          </ul>
+          <div className="flex justify-center">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/QF8fAHYLglo?si=0febL7w3-S0Ii7rQ" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+          </div>
+        </div>
       </ResponsiveContent>
     ),
   },
@@ -113,11 +166,17 @@ export const data = [
     category: "Internship project",
     src: "/TeamPromotions1.png",
     content: (
-      <ResponsiveContent >
-        <h1 className="text-2xl text-black font-bold mb-2 text-center sm:text-left">Internship Project</h1>
-        <h2 className="text-xl mb-4 text-black text-center sm:text-left">Oct 2023 - Mar 2024 · 6 months</h2>
+      <ResponsiveContent>
+        <h1 className="text-2xl text-black font-bold mb-2 text-center sm:text-left">
+          Internship Project
+        </h1>
+        <h2 className="text-xl mb-4 text-black text-center sm:text-left">
+          Oct 2023 - Mar 2024 · 6 months
+        </h2>
         <div className="space-y-4">
-          <h2 className="text-lg text-black font-semibold">Project Overview:</h2>
+          <h2 className="text-lg text-black font-semibold">
+            Project Overview:
+          </h2>
           <p className="text-sm sm:text-base text-black">
             As part of the Tech Team at Team Promotions, we enhanced the
             website's interface. Worked on the UI as well as on the blog feature
@@ -136,7 +195,8 @@ export const data = [
   },
   {
     title: "Builders Hub",
-    category: "Collaborative project-building community fostering innovation and teamwork",
+    category:
+      "Collaborative project-building community fostering innovation and teamwork",
     link: "https://buildershub.vercel.app/",
     src: "/buildersHub.png",
     content: (
@@ -168,17 +228,18 @@ export const data = [
   },
   {
     title: "Cash Flow",
-    category: "Secure P2P app built with ReactJS, ExpressJS, MongoDB & TailwindCSS.",
+    category:
+      "Secure P2P app built with ReactJS, ExpressJS, MongoDB & TailwindCSS.",
     link: "https://penpoint.vercel.app/",
     src: "/CashFlow.png",
     content: (
       <ResponsiveContent>
         <div className="flex justify-center">
-          <Image 
-            src='/CashFlow.png' 
-            alt="Screenshot" 
-            width={200} 
-            height={220} 
+          <Image
+            src="/CashFlow.png"
+            alt="Screenshot"
+            width={200}
+            height={220}
             layout="responsive"
             className="max-w-full h-auto"
           />
