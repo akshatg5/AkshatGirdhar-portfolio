@@ -16,7 +16,7 @@ const StarryBackground: React.FC = () => {
     canvas.height = window.innerHeight
 
     const stars: { x: number; y: number; radius: number; vx: number; vy: number }[] = []
-    const numStars = 140
+    const numStars = 400
 
     for (let i = 0; i < numStars; i++) {
       stars.push({
