@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import { Code, Palette, PenTool, User, Mail, MapPin, Laptop, Twitter, Github } from 'lucide-react'
 import Link from 'next/link'
 import { LinkedInLogoIcon } from '@radix-ui/react-icons'
+import MobileHeroSection from './MobileHeroSection'
 
 interface PortfolioCardProps {
   icon: React.ElementType
@@ -15,7 +16,7 @@ interface PortfolioCardProps {
   children?: React.ReactNode
 }
 
-const PortfolioCard: React.FC<PortfolioCardProps> = ({
+export const PortfolioCard: React.FC<PortfolioCardProps> = ({
   icon: Icon,
   title,
   description,
@@ -47,8 +48,8 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({
 
 export default function HeroSection() {
   return (
-    <div className="min-h-screen to-muted text-foreground py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+    <div className="min-h-screen to-muted text-foreground py-12 px-4 lg:px-8">
+      <div className="max-w-7xl mx-auto max-sm:hidden" >
         <motion.div
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -140,6 +141,9 @@ export default function HeroSection() {
             className="md:col-start-3 md:row-start-2"
           />
         </div>
+      </div>
+      <div className="max-w-7xl mx-auto max-sm:block lg:hidden" >
+        <MobileHeroSection />
       </div>
     </div>
   )
