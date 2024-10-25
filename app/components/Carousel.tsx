@@ -154,7 +154,13 @@ export const data = [
             <li>React frontend</li>
           </ul>
           <div className="flex justify-center">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/QF8fAHYLglo?si=0febL7w3-S0Ii7rQ" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/QF8fAHYLglo?si=0febL7w3-S0Ii7rQ"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            ></iframe>
           </div>
         </div>
       </ResponsiveContent>
@@ -243,6 +249,21 @@ export const data = [
             layout="responsive"
             className="max-w-full h-auto"
           />
+        </div>
+      </ResponsiveContent>
+    ),
+  },
+  {
+    title: "Old Portfolio",
+    category:
+      "First portfolio made using React and Tailwind CSS,simple projects and clones like.",
+    link: "https://old-portfolio-flame.vercel.app/",
+    src: "/oldportfolio.png",
+    content: (
+      <ResponsiveContent>
+        <div>
+          <h1>Old Portfolio</h1>
+          <p>Simple projects like Youtube clone, Dukaan Assignment.</p>
         </div>
       </ResponsiveContent>
     ),
