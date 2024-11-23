@@ -1,12 +1,6 @@
-import Image from 'next/image'
-import { AppleCardsCarouselDemo } from '../components/Carousel'
+import React from "react";
+import { AppleCardsCarouselDemo } from "../components/Carousel";
 
 export default function Projects() {
-  return (
-    <div>
-      <div>
-        <AppleCardsCarouselDemo />
-      </div>
-    </div>
-  )
+  return <AppleCardsCarouselDemo />;
 }
