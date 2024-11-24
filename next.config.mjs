@@ -20,6 +20,12 @@ const nextConfig = {
           port: "",
           pathname: "/**",
         },
+        {
+          protocol: "https",
+          hostname: "cdn.buymeacoffee.com",
+          port: "",
+          pathname: "/**",
+        },
       ],
     },
     eslint: {
