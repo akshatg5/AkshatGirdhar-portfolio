@@ -81,6 +81,15 @@ export const data = [
     ),
   },
   {
+    title: "LeetRank",
+    category: "Leetcode Ranking Platform for colleges",
+    link: "https://leet-rank.vercel.app/",
+    src: "/LeetRank.png",
+    content: (
+      <TweetWithSkeleton tweetId="1861798361868943505" />
+    ),
+  },
+  {
     title: "CodeReceipt",
     category: "Developer Tool",
     link: "https://codereceipt.vercel.app/",

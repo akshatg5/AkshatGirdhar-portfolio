@@ -11,8 +11,28 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Akshat Girdhar",
-  description: "Portfolio website showcasing Akshat Girdhar's work!",
-}
+  description: "Portfolio of Akshat Girdhar - A collection of all the projects I've worked on and more stuff about me!",
+  openGraph: {
+    title: "Akshat Girdhar",
+    description: "Portfolio of Akshat Girdhar - A collection of all the projects I've worked on and more stuff about me!",
+    images: [
+      {
+        url: "https://akshatgirdhar-portfolio.vercel.app/PortfolioOG.png",
+        width: 1200,
+        height: 630,
+        alt: "Portfolio Preview",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "CodeReceipt",
+    description: "Get receipt-like images for your LeetCode profile!",
+    images: ["https://akshatgirdhar-portfolio.vercel.app/PortfolioOG.png"],
+    creator: "@AkshatGirdhar2",
+  },
+};
+
 
 export default function RootLayout({
   children,
