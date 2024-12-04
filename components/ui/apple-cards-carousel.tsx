@@ -236,7 +236,7 @@ export const Card = ({
               </motion.h2>
               <Link href={card.link}>
                 <button className="bg-black w-full flex justify-center items-center rounded-xl shadow-md py-2 my-2 text-white">
-                  Visit <Link2 />{" "}
+                  Visit {" "} <Link2 className="mx-4" /> 
                 </button>
               </Link>
               <BlurImage
