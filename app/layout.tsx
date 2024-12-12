@@ -26,8 +26,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "CodeReceipt",
-    description: "Get receipt-like images for your LeetCode profile!",
+    title: "Akshat Girdhar",
+    description: "Portfolio of Akshat Girdhar - A collection of all the projects I've worked on and more stuff about me!",
     images: ["https://akshatgirdhar-portfolio.vercel.app/PortfolioOG.png"],
     creator: "@AkshatGirdhar2",
   },
