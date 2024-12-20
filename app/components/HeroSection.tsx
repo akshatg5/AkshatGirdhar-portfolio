@@ -1,19 +1,29 @@
-'use client'
+"use client";
 
-import React from 'react'
-import { motion } from 'framer-motion'
-import { Code, Palette, PenTool, User, Mail, MapPin, Laptop, Twitter, Github } from 'lucide-react'
-import Link from 'next/link'
-import { LinkedInLogoIcon } from '@radix-ui/react-icons'
-import MobileHeroSection from './MobileHeroSection'
+import React from "react";
+import { motion } from "framer-motion";
+import {
+  Code,
+  Palette,
+  PenTool,
+  User,
+  Mail,
+  MapPin,
+  Laptop,
+  Twitter,
+  Github,
+} from "lucide-react";
+import Link from "next/link";
+import { LinkedInLogoIcon } from "@radix-ui/react-icons";
+import MobileHeroSection from "./MobileHeroSection";
 
 interface PortfolioCardProps {
-  icon: React.ElementType
-  title: string
-  description: string
-  link: string
-  className?: string
-  children?: React.ReactNode
+  icon: React.ElementType;
+  title: string;
+  description: string;
+  link: string;
+  className?: string;
+  children?: React.ReactNode;
 }
 
 export const PortfolioCard: React.FC<PortfolioCardProps> = ({
@@ -30,7 +40,7 @@ export const PortfolioCard: React.FC<PortfolioCardProps> = ({
     whileHover={{ scale: 1.05 }}
     className={`bg-card text-card-foreground rounded-lg shadow-lg p-6 cursor-pointer ${className}`}
   >
-    <Link href={link} target='_blank' className="block h-full">
+    <Link href={link} target="_blank" className="block h-full">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -41,22 +51,26 @@ export const PortfolioCard: React.FC<PortfolioCardProps> = ({
         <h3 className="text-lg font-semibold mb-2">{title}</h3>
         <p className="text-muted-foreground">{description}</p>
         {children}
+        <div className="flex">
+
+        </div>
       </motion.div>
     </Link>
+        <div className="inset-x-0 w-1/2 z-50 mx-auto bottom-0 h-2 bg-gradient-to-r from-transparent via-pink-400 to-transparent"></div>
+        <div className="inset-x-0 w-full z-10 bottom-0 h-2 bg-gradient-to-r from-transparent via-blue-800 to-transparent"></div>
   </motion.div>
-)
+);
 
 export default function HeroSection() {
   return (
     <div className="min-h-screen to-muted text-foreground py-12 px-4 lg:px-8">
-      <div className="max-w-7xl mx-auto max-sm:hidden" >
+      <div className="max-w-7xl mx-auto max-sm:hidden">
         <motion.div
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
-        >
-        </motion.div>
+        ></motion.div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <PortfolioCard
             icon={Code}
@@ -112,7 +126,8 @@ export default function HeroSection() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <LinkedInLogoIcon width={24} height={24} className="mr-2" /> Akshat Girdhar
+                    <LinkedInLogoIcon width={24} height={24} className="mr-2" />{" "}
+                    Akshat Girdhar
                   </a>
                   <a
                     className="flex items-center text-muted-foreground hover:text-primary transition-colors"
@@ -142,9 +157,9 @@ export default function HeroSection() {
           />
         </div>
       </div>
-      <div className="max-w-7xl mx-auto max-sm:block lg:hidden" >
+      <div className="max-w-7xl mx-auto max-sm:block lg:hidden">
         <MobileHeroSection />
       </div>
     </div>
-  )
+  );
 }
