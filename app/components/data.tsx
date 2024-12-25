@@ -63,6 +63,15 @@ export const data = [
     ),
   },
   {
+    title: "Learn-Lens",
+    category: "Educational Platform",
+    link: "https://learn-lens.vercel.app/",
+    src: "/Learn-Lens.png",
+    content: (
+      <TweetWithSkeleton tweetId="1870074879736955321" />
+    ),
+  },
+  {
     title: "MediaByte",
     category: "Media Handling Service",
     link: "https://mediabyte.vercel.app/",
@@ -93,7 +102,7 @@ export const data = [
     title: "CodeReceipt",
     category: "Developer Tool",
     link: "https://codereceipt.vercel.app/",
-    src: "/image.png",
+    src: "/CodeReceipt.png",
     content: (
       <TweetWithSkeleton tweetId="1859689580867485763" />
     ),

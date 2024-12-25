@@ -51,13 +51,11 @@ export const PortfolioCard: React.FC<PortfolioCardProps> = ({
         <h3 className="text-lg font-semibold mb-2">{title}</h3>
         <p className="text-muted-foreground">{description}</p>
         {children}
-        <div className="flex">
-
-        </div>
+        <div className="flex"></div>
       </motion.div>
     </Link>
-        <div className="inset-x-0 w-1/2 z-50 mx-auto bottom-0 h-2 bg-gradient-to-r from-transparent via-pink-400 to-transparent"></div>
-        <div className="inset-x-0 w-full z-10 bottom-0 h-2 bg-gradient-to-r from-transparent via-blue-800 to-transparent"></div>
+    <div className="inset-x-0 w-1/2 z-50 mx-auto bottom-0 h-2 bg-gradient-to-r from-transparent via-pink-400 to-transparent"></div>
+    <div className="inset-x-0 w-full z-10 bottom-0 h-2 bg-gradient-to-r from-transparent via-blue-800 to-transparent"></div>
   </motion.div>
 );
 
