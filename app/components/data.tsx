@@ -171,6 +171,18 @@ export const data = [
     ),
   },
   {
+    title: "CS-50 Web Projects",
+    category: "Course Projects",
+    link: "https://www.youtube.com/playlist?list=PLqv3LXavHm2t1BZtwKnypAAqc8KFl2F64",
+    src: "/cs50-projects.png",
+    content: (
+      <p>
+        A collection of web development projects built as a part of the course CS50. 
+        Technologies used include frameworks like Flask and Django.
+      </p>
+    ),
+  },
+  {
     title: "Old Portfolio",
     category: "Personal Website",
     link: "https://old-portfolio-flame.vercel.app/",
