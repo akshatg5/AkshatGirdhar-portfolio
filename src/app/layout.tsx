@@ -6,6 +6,7 @@ import type { Metadata } from "next";
 import { Source_Code_Pro } from "next/font/google";
 import "./globals.css";
 import { Appbar } from "@/components/navbar";
+import { Analytics } from '@vercel/analytics/next';
 
 const source_code = Source_Code_Pro({
   subsets: ["latin"],
@@ -62,6 +63,7 @@ export default function RootLayout({
           source_code.className
         )}
       >
+        <Analytics />
         <ThemeProvider attribute="class" defaultTheme="light">
           <TooltipProvider delayDuration={0}>
             {children}
