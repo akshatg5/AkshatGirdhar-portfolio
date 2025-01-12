@@ -31,7 +31,7 @@ export function ProjectCard(project: Project) {
     <>
       <Card
         className={cn(
-          "group relative flex h-full flex-col overflow-hidden border-none transition-all duration-300 ease-out hover:shadow-lg bg-gray-100 dark:bg-gray-800 cursor-pointer",
+          "group relative flex h-full flex-col overflow-hidden shadow-md transition-all duration-300 ease-out hover:shadow-lg hover:scale-110 bg-gray-100 dark:bg-gray-800 cursor-pointer",
           project.className
         )}
         onClick={() => setIsModalOpen(true)}
@@ -73,7 +73,7 @@ export function ProjectCard(project: Project) {
                 >
                   <Badge
                     variant="outline"
-                    className="flex items-center gap-1 px-4 py-2 text-xs font-normal bg-gray-600 dark:bg-gray-700 text-white dark:text-gray-200"
+                    className="flex items-center gap-1 px-4 py-2 text-xs font-normal bg-gray-600 dark:bg-gray-700 text-white dark:text-gray-200 hover:scale-105 hover:bg-black"
                   >
                     {link.icon}
                     <span>{link.type}</span>

@@ -1,5 +1,5 @@
 import { Icons } from "@/components/icons";
-import { Music } from "lucide-react";
+import { CircleDollarSignIcon, Music } from "lucide-react";
 
 const projects = [
     {
@@ -20,51 +20,49 @@ const projects = [
         {
           type: "Website",
           href: "https://votetube.vercel.app/",
-          icon: <Music className="size-3" />,
+          icon: <Icons.globe className="size-3" />,
         }
       ],
       image: "/Votetube1.png",
       video : ""
       },
     {
-      title: "Magic UI",
-      href: "https://magicui.design",
-      dates: "June 2023 - Present",
+      title: "LiteKite",
+      href: "https://litekite.vercel.app/",
+      dates: "",
       active: true,
       description:
-        "Designed, developed and sold animated UI components for developers.",
+        "A mock stock exchange application supporting American and Indian markets along with AI supports, with tools like comprehensive portfolio analysis, stock suggestions by AI, price prediction and much more!",
       technologies: [
-        "Next.js",
+        "React.js",
         "Typescript",
         "PostgreSQL",
-        "Prisma",
+        "Flask",
+        "Python",
         "TailwindCSS",
-        "Stripe",
-        "Shadcn UI",
-        "Magic UI",
       ],
       links: [
         {
           type: "Website",
-          href: "https://magicui.design",
-          icon: <Icons.globe className="size-3" />,
+          href: "https://litekite.vercel.app/",
+          icon: <Icons.globe className="size-3" />
         },
         {
           type: "Source",
-          href: "https://github.com/magicuidesign/magicui",
+          href: "https://github.com/akshatg5/LiteKite",
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "",
-      video: "https://cdn.magicui.design/bento-grid.mp4",
+      image: "/litekite.png",
+      video: "",
     },
     {
-      title: "llm.report",
-      href: "https://llm.report",
-      dates: "April 2023 - September 2023",
+      title: "Learn-Lens",
+      href: "https://learn-lens.vercel.app/",
+      dates: "",
       active: true,
       description:
-        "Developed an open-source logging and analytics platform for OpenAI: Log your ChatGPT API requests, analyze costs, and improve your prompts.",
+        "Educational Platform allowing users to compare couses/cohorts and get a quantitative comparsion in between courses.",
       technologies: [
         "Next.js",
         "Typescript",
@@ -72,24 +70,16 @@ const projects = [
         "Prisma",
         "TailwindCSS",
         "Shadcn UI",
-        "Magic UI",
-        "Stripe",
-        "Cloudflare Workers",
       ],
       links: [
         {
           type: "Website",
-          href: "https://llm.report",
+          href: "https://learn-lens.vercel.app/",
           icon: <Icons.globe className="size-3" />,
         },
-        {
-          type: "Source",
-          href: "https://github.com/dillionverma/llm.report",
-          icon: <Icons.github className="size-3" />,
-        },
       ],
-      image: "",
-      video: "https://cdn.llm.report/openai-demo.mp4",
+      image: "/learnlens.png",
+      video: "",
     },
     {
       title: "Automatic Chat",
