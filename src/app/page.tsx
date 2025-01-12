@@ -5,6 +5,8 @@ import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import projects from "@/data/projects";
 import { DATA } from "@/data/resume";
+import { Github, Linkedin } from "lucide-react";
+import Link from "next/link";
 import Markdown from "react-markdown";
 
 const BLUR_FADE_DELAY = 0.05;
@@ -20,7 +22,7 @@ export default function Page() {
                 delay={BLUR_FADE_DELAY}
                 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
                 yOffset={8}
-                text={`Hi,I'm ${DATA.name}`}
+                text={`${DATA.name}`}
               />
               <BlurFadeText
                 className="max-w-[600px] md:text-xl"
@@ -72,10 +74,13 @@ export default function Page() {
           ))}
         </div>
       </section>
-      <section id="projects" className="py-16 bg-muted">
+      <section
+        id="projects"
+        className="py-16 bg-gradient-to-b from-white via-neutral-200 to-black/50 rounded-xl"
+      >
         <div className="container mx-auto px-4">
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
-            <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center mb-6">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-primary text-primary-foreground px-3 py-1 text-sm font-medium">
                   Proof Of Work
@@ -91,6 +96,18 @@ export default function Page() {
           </BlurFade>
         </div>
       </section>
+      <footer className="w-full rounded-xl dark:bg-gray-800 py-6 px-4 mt-8">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-center items-center">
+          <div className="text-center md:text-left mb-4 md:mb-0">
+            <p className="text-sm text-gray-600 dark:text-gray-400">
+              © {new Date().getFullYear()} Akshat Girdhar
+            </p>
+            <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">
+              Crafted with passion and code
+            </p>
+          </div>
+        </div>
+      </footer>
     </main>
   );
 }

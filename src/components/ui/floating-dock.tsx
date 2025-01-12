@@ -28,13 +28,7 @@ export const FloatingDock = ({
   );
 };
 
-const FloatingDockMobile = ({
-  items,
-  className,
-}: {
-  items: { title: string; icon: React.ReactNode; href: string }[];
-  className?: string;
-}) => {
+const FloatingDockMobile = ({ items, className,}: { items: { title: string; icon: React.ReactNode; href: string }[]; className?: string;}) => {
   const [open, setOpen] = useState(false);
   return (
     <div className={cn("fixed bottom-4 right-4 block md:hidden", className)}>
@@ -45,20 +39,11 @@ const FloatingDockMobile = ({
             initial={{ width: 40, height: 40 }}
             animate={{ width: 'auto', height: 'auto' }}
             exit={{ width: 40, height: 40 }}
-            className="absolute bottom-0 right-0 flex items-center bg-gray-50 dark:bg-neutral-800 rounded-full overflow-hidden"
+            className="absolute bottom-20 px-4 py-6 right-0 flex items-center bg-gray-50 dark:bg-neutral-800 rounded-full overflow-hidden"
           >
             {items.map((item, idx) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 20 }}
-                transition={{ delay: idx * 0.05 }}
-              >
-                <Link
-                  href={item.href}
-                  className="h-10 w-10 mx-1 rounded-full bg-gray-100 dark:bg-neutral-700 flex items-center justify-center"
-                >
+              <motion.div key={item.title} initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: 20 }}  transition={{ delay: idx * 0.05 }} >
+                <Link href={item.href} className="h-10 w-10 mx-1 rounded-full bg-gray-100 dark:bg-neutral-700 flex items-center justify-center" >
                   <div className="h-6 w-6">{item.icon}</div>
                 </Link>
               </motion.div>
@@ -66,11 +51,8 @@ const FloatingDockMobile = ({
           </motion.div>
         )}
       </AnimatePresence>
-      <button
-        onClick={() => setOpen(!open)}
-        className="h-10 w-10 rounded-full bg-gray-50 dark:bg-neutral-800 flex items-center justify-center z-10 relative"
-      >
-        <IconLayoutNavbarCollapse className="h-5 w-5 text-neutral-500 dark:text-neutral-400" />
+      <button onClick={() => setOpen(!open)} className="h-16 w-16 bottom-20 rounded-full px-4 py-6 bg-gray-50 dark:bg-neutral-800 flex items-center justify-center z-10 relative" >
+        <IconLayoutNavbarCollapse className="h-10 w-10 text-neutral-500 dark:text-neutral-400" />
       </button>
     </div>
   );

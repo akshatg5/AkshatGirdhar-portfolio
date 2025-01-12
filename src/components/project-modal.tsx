@@ -26,7 +26,7 @@ export function ProjectModal({ isOpen, onClose, project }: ProjectModalProps) {
         </DialogHeader>
         <ScrollArea className="max-h-[60vh] pr-4">
           <div className="space-y-4">
-            <Link href={project.href || '#'}>
+            <Link href={project.href || '#'} target="_blank">
             {(project.image || project.video) && (
               <div className="relative h-64 w-full overflow-hidden rounded-lg">
                 {project.video ? (

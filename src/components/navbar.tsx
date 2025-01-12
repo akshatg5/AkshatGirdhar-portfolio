@@ -21,11 +21,6 @@ export function Appbar() {
       href: "/",
     },
     {
-      title: "Projects",
-      icon: <LucideLaptop className="text-black dark:text-neutral-300" />,
-      href: "/projects",
-    },
-    {
       title: "Resume",
       icon: <PaperclipIcon className="text-black dark:text-neutral-300" />,
       href: "/resume",
@@ -33,7 +28,7 @@ export function Appbar() {
     {
       title: "GitHub",
       icon: <IconBrandGithub className="text-black dark:text-neutral-300" />,
-      href: "/github",
+      href: "https://github.com/akshatg5",
     },
     {
       title: "LinkedIn",

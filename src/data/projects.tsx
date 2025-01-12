@@ -5,10 +5,9 @@ const projects = [
     {
       title: "VoteTube",
       href: "https://votetube.vercel.app/",
-      dates: "Jan 2024 - Feb 2024",
+      dates: "",
       active: true,
-      description:
-        "Effortlessly curate the perfect shared experience with friends. Votetube empowers groups to collaboratively build personalized playlists of songs or videos. Track individual contributions, vote on favorites, and generate an ordered list that reflects the group's collective taste. Enjoy seamless entertainment together, effortlessly.",
+      description: "Group Playlist Platform - A collaborative platform for creating and managing group playlists.",
       technologies: [
         "Next.js",
         "Typescript",
@@ -24,15 +23,61 @@ const projects = [
         }
       ],
       image: "/Votetube1.png",
-      video : ""
-      },
+      video: ""
+    },
+    {
+      title: "Learn-Lens",
+      href: "https://learn-lens.vercel.app/",
+      dates: "",
+      active: true,
+      description: "Educational Platform allowing users to compare courses/cohorts and get a quantitative comparison between courses.",
+      technologies: [
+        "Next.js",
+        "Typescript",
+        "PostgreSQL",
+        "Prisma",
+        "TailwindCSS",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://learn-lens.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        }
+      ],
+      image: "/learnlens.png",
+      video: ""
+    },
+    {
+      title: "MediaByte",
+      href: "https://mediabyte.vercel.app/",
+      dates: "",
+      active: true,
+      description: "Media handling service that uses cloudinary AI services to trim videos and re-size images.",
+      technologies: [
+        "Next.js",
+        "Typescript",
+        "PostgreSQL",
+        "Prisma",
+        "TailwindCSS",
+        "Cloudinary",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://mediabyte.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        }
+      ],
+      image: "/mediabyte.png",
+      video: ""
+    },
     {
       title: "LiteKite",
       href: "https://litekite.vercel.app/",
       dates: "",
       active: true,
-      description:
-        "A mock stock exchange application supporting American and Indian markets along with AI supports, with tools like comprehensive portfolio analysis, stock suggestions by AI, price prediction and much more!",
+      description: "Financial Management Platform - A mock stock exchange application supporting American and Indian markets along with AI supports.",
       technologies: [
         "React.js",
         "Typescript",
@@ -45,71 +90,209 @@ const projects = [
         {
           type: "Website",
           href: "https://litekite.vercel.app/",
-          icon: <Icons.globe className="size-3" />
-        },
-        {
-          type: "Source",
-          href: "https://github.com/akshatg5/LiteKite",
-          icon: <Icons.github className="size-3" />,
-        },
+          icon: <Icons.globe className="size-3" />,
+        }
       ],
-      image: "/litekite.png",
-      video: "",
+      image: "/Litekite.png",
+      video: ""
     },
     {
-      title: "Learn-Lens",
-      href: "https://learn-lens.vercel.app/",
+      title: "LeetRank",
+      href: "https://leet-rank.vercel.app/",
       dates: "",
       active: true,
-      description:
-        "Educational Platform allowing users to compare couses/cohorts and get a quantitative comparsion in between courses.",
+      description: "Leetcode Ranking Platform for colleges - A platform to track and compare coding progress.",
       technologies: [
         "Next.js",
         "Typescript",
         "PostgreSQL",
         "Prisma",
         "TailwindCSS",
-        "Shadcn UI",
       ],
       links: [
         {
           type: "Website",
-          href: "https://learn-lens.vercel.app/",
+          href: "https://leet-rank.vercel.app/",
           icon: <Icons.globe className="size-3" />,
-        },
+        }
       ],
-      image: "/learnlens.png",
-      video: "",
+      image: "/leetrank.png",
+      video: ""
     },
     {
-      title: "Automatic Chat",
-      href: "https://automatic.chat",
-      dates: "April 2023 - March 2024",
+      title: "CodeReceipt",
+      href: "https://codereceipt.vercel.app/",
+      dates: "",
       active: true,
-      description:
-        "Developed an AI Customer Support Chatbot which automatically responds to customer support tickets using the latest GPT models.",
+      description: "Developer Tool for generating and managing code snippets and documentation.",
       technologies: [
         "Next.js",
         "Typescript",
         "PostgreSQL",
         "Prisma",
         "TailwindCSS",
-        "Shadcn UI",
-        "Magic UI",
-        "Stripe",
-        "Cloudflare Workers",
       ],
       links: [
         {
           type: "Website",
-          href: "https://automatic.chat",
+          href: "https://codereceipt.vercel.app/",
           icon: <Icons.globe className="size-3" />,
-        },
+        }
       ],
-      image: "",
-      video:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/automatic-chat.mp4",
+      image: "/CodeReceipt.png",
+      video: ""
     },
-    ];
-  
-  export default projects;
+    {
+      title: "Pen Point",
+      href: "https://penpoint.vercel.app/",
+      dates: "",
+      active: true,
+      description: "Blogging Platform for creating and sharing written content.",
+      technologies: [
+        "Next.js",
+        "Typescript",
+        "PostgreSQL",
+        "Prisma",
+        "TailwindCSS",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://penpoint.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        }
+      ],
+      image: "/penpoint.png",
+      video: ""
+    },
+    {
+      title: "Real time-2WayDatabaseSync",
+      href: "https://www.youtube.com/watch?v=QF8fAHYLglo",
+      dates: "",
+      active: true,
+      description: "A real-time database to Google Sheet data sync project. Created a NodeJS server connected to Google Sheets webhook and PostgresDB for bidirectional synchronization.",
+      technologies: [
+        "Node.js",
+        "PostgreSQL",
+        "Google Sheets API",
+      ],
+      links: [
+        {
+          type: "Video",
+          href: "https://www.youtube.com/watch?v=QF8fAHYLglo",
+          icon: <Icons.youtube className="size-3" />,
+        }
+      ],
+      image: "/DBsync.png",
+      video: ""
+    },
+    {
+      title: "Team Promotions Pvt Ltd. Website",
+      href: "https://www.teampromotions.in/",
+      dates: "",
+      active: true,
+      description: "Enhanced website interface, developed blog feature, and implemented a user-friendly CMS using Django with an integrated newsletter feature.",
+      technologies: [
+        "Django",
+        "Python",
+        "PostgreSQL",
+        "TailwindCSS",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://www.teampromotions.in/",
+          icon: <Icons.globe className="size-3" />,
+        }
+      ],
+      image: "/teampromotions.png",
+      video: ""
+    },
+    {
+      title: "Temflo Pvt Ltd. Website",
+      href: "https://www.temflo.co.in/",
+      dates: "",
+      active: true,
+      description: "Freelance project developing a company website with modern features and design.",
+      technologies: [
+        "Next.js",
+        "Typescript",
+        "TailwindCSS",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://www.temflo.co.in/",
+          icon: <Icons.globe className="size-3" />,
+        }
+      ],
+      image: "/temflo.png",
+      video: ""
+    },
+    {
+      title: "Cash Flow",
+      href: "https://penpoint.vercel.app/",
+      dates: "",
+      active: true,
+      description: "Secure P2P app built with ReactJS, ExpressJS, MongoDB & TailwindCSS. Facilitates easy and secure financial transactions between users.",
+      technologies: [
+        "React.js",
+        "Express.js",
+        "MongoDB",
+        "TailwindCSS",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://penpoint.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        }
+      ],
+      image: "/CashFlow.png",
+      video: ""
+    },
+    {
+      title: "CS-50 Web Projects",
+      href: "https://www.youtube.com/playlist?list=PLqv3LXavHm2t1BZtwKnypAAqc8KFl2F64",
+      dates: "",
+      active: true,
+      description: "A collection of web development projects built as a part of the course CS50. Technologies used include frameworks like Flask and Django.",
+      technologies: [
+        "Flask",
+        "Django",
+        "Python",
+        "JavaScript",
+      ],
+      links: [
+        {
+          type: "Video",
+          href: "https://www.youtube.com/playlist?list=PLqv3LXavHm2t1BZtwKnypAAqc8KFl2F64",
+          icon: <Icons.youtube className="size-3" />,
+        }
+      ],
+      image: "/cs50-projects.png",
+      video: ""
+    },
+    {
+      title: "Old Portfolio",
+      href: "https://old-portfolio-flame.vercel.app/",
+      dates: "",
+      active: true,
+      description: "First portfolio made using React and Tailwind CSS. Includes simple projects and clones like a YouTube clone and Dukaan Assignment.",
+      technologies: [
+        "React.js",
+        "TailwindCSS",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://old-portfolio-flame.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        }
+      ],
+      image: "/oldportfolio.png",
+      video: ""
+    },
+];
+
+export default projects;
