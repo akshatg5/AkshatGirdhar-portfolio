@@ -139,7 +139,7 @@ const projects = [
           icon: <Icons.globe className="size-3" />,
         }
       ],
-      image: "/CodeReceipt.png",
+      image: "/codereceipt.png",
       video: ""
     },
     {
