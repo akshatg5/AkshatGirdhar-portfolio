@@ -293,6 +293,34 @@ const projects = [
       image: "/oldportfolio.png",
       video: ""
     },
+    {
+      title: "Current Portfolio",
+      href: "https://akshatgirdhar-portfolio.vercel.app/",
+      dates: "",
+      active: true,
+      description: "Current portfolio is made using Next.js and Tailwind CSS.",
+      technologies: [
+        "Next.js",
+        "TailwindCSS",
+        "ShadCN",
+          "MagicUI",
+          "AceternityUI"
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://akshatgirdhar-portfolio.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+          {
+          type: "Github",
+          href: "https://github.com/akshatg5/AkshatGirdhar-portfolio",
+          icon: <Icons.github className="size-3" />,
+        }
+      ],
+      image: "/oldportfolio.png",
+      video: ""
+    },
 ];
 
 export default projects;
