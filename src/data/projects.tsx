@@ -318,7 +318,7 @@ const projects = [
           icon: <Icons.github className="size-3" />,
         }
       ],
-      image: "/oldportfolio.png",
+      image: "/Screenshot 2025-01-14 010518.png",
       video: ""
     },
 ];
