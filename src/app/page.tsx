@@ -2,6 +2,7 @@ import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { ProjectCarousel } from "@/components/project-carousel";
 import { ResumeCard } from "@/components/resume-card";
+import { Themebutton } from "@/components/theme-button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import projects from "@/data/projects";
 import { DATA } from "@/data/resume";
@@ -15,6 +16,7 @@ export default function Page() {
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
       <section id="hero">
+      <Themebutton />
         <div className="mx-auto w-full max-w-2xl space-y-8">
           <div className="gap-2 flex justify-between">
             <div className="flex-col flex flex-1 space-y-1.5">
@@ -74,9 +76,8 @@ export default function Page() {
           ))}
         </div>
       </section>
-      <section
-        id="projects"
-        className="py-16 bg-gradient-to-b from-white via-neutral-200 to-black/50 rounded-xl"
+      <section id="projects"
+        className="py-16 bg-gradient-to-b from-white dark:from-background via-neutral-200 dark:via-neutral-600 to-black/50 dark:to-white rounded-xl"
       >
         <div className="container mx-auto px-4">
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
