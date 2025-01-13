@@ -6,6 +6,7 @@ import type { Metadata } from "next";
 import { Source_Code_Pro } from "next/font/google";
 import "./globals.css";
 import { Appbar } from "@/components/navbar";
+import { Analytics } from '@vercel/analytics/next';
 
 const source_code = Source_Code_Pro({
   subsets: ["latin"],
@@ -57,12 +58,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={cn(
-          "min-h-screen bg-background text-foreground antialiased max-w-2xl mx-auto py-12 sm:py-24 px-6",
-          source_code.className
-        )}
-      >
+        className={cn("min-h-screen bg-background text-foreground antialiased max-w-2xl mx-auto py-12 sm:py-24 px-6",source_code.className)}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <Analytics />
+        <ThemeProvider attribute="class" defaultTheme="light">
           <TooltipProvider delayDuration={0}>
             {children}
             <Appbar />
