@@ -24,6 +24,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: `${DATA.name}`,
     description: DATA.description,
+    images: [
+      {
+        url: "/PortfolioOg.png",
+        width: 1200,
+        height: 630,
+        alt: "Portfollio Preview",
+      },
+    ],
     url: DATA.url,
     siteName: `${DATA.name}`,
     locale: "en_US",
@@ -43,6 +51,8 @@ export const metadata: Metadata = {
   twitter: {
     title: `${DATA.name}`,
     card: "summary_large_image",
+    images: ["/PortfolioOg.png"],
+    creator: "@AkshatGirdhar2",
   },
   verification: {
     google: "",
