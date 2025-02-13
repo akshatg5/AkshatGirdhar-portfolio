@@ -14,6 +14,18 @@ export const DATA = {
   avatarUrl: "/AkshatGirdhar_img.jpg",
   work: [
     {
+      company: "Grid-OS",
+      href: "https://www.grid-os.com/",
+      badges: [],
+      location: "On-Site",
+      title: "SDE-1",
+      logoUrl: "/GridOS.png",
+      start: "February 2025",
+      end: "Present",
+      description:
+        "Working on testing tools for hardware products.",
+    },
+    {
       company: "Koshiqa",
       href: "https://koshiqa.com/",
       badges: [],
@@ -21,7 +33,7 @@ export const DATA = {
       title: "Full Stack Developer",
       logoUrl: "/logo-mini.svg",
       start: "April 2024",
-      end: "Present",
+      end: "January 2025",
       description:
         "Developed the main website for the company. Designed and Developed multiple internal tools and interactive dashboards using React,Typescript,NodeJs,Talwind CSS to analyze real-time data,leading to a considerable increase in the team's efficiency.Leveraged AWS's S3 and Cloudfront services to host the website and the tools mentioned.",
     },
