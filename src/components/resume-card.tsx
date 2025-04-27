@@ -17,7 +17,7 @@ interface ResumeCardProps {
   href?: string;
   badges?: readonly string[];
   period: string;
-  description?: string;
+  description?: string | string[];
 }
 export const ResumeCard = ({
   logoUrl,
@@ -86,23 +86,30 @@ export const ResumeCard = ({
             </div>
             {subtitle && <div className="font-sans text-xs">{subtitle}</div>}
           </CardHeader>
-          {description && (
+            {description && (
             <motion.div
               initial={{ opacity: 0, height: 0 }}
               animate={{
-                opacity: isExpanded ? 1 : 0,
-
-                height: isExpanded ? "auto" : 0,
+              opacity: isExpanded ? 1 : 0,
+              height: isExpanded ? "auto" : 0,
               }}
               transition={{
-                duration: 0.7,
-                ease: [0.16, 1, 0.3, 1],
+              duration: 0.7,
+              ease: [0.16, 1, 0.3, 1],
               }}
               className="mt-2 text-xs sm:text-sm"
             >
-              {description}
+              {Array.isArray(description) ? (
+              <ul className="list-disc pl-4 space-y-1">
+                {description.map((point, index) => (
+                <li key={index}>{point}</li>
+                ))}
+              </ul>
+              ) : (
+              <p>{description}</p>
+              )}
             </motion.div>
-          )}
+            )}
         </div>
       </Card>
     </Link>
