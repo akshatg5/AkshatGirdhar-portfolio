@@ -4,7 +4,7 @@ import { CircleDollarSignIcon, Music } from "lucide-react";
 const projects = [
     {
       title: "VoteTube",
-      href: "https://votetube.vercel.app/",
+      href: "https://votetube.in",
       dates: "",
       active: true,
       description: "Group Playlist Platform - A collaborative platform for creating and managing group playlists.",
