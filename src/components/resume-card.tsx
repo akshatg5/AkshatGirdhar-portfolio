@@ -5,9 +5,26 @@ import { Badge } from "@/components/ui/badge"
 import { Card } from "@/components/ui/card"
 import { cn } from "@/lib/utils"
 import { motion } from "framer-motion"
-import { ChevronDownIcon } from 'lucide-react'
+import { ChevronDownIcon, ExternalLink, Calendar, MapPin } from "lucide-react"
 import Link from "next/link"
 import React from "react"
+import { HighlightedText } from "./highlighted-text"
+
+interface Highlight {
+  text: string
+  type: "link" | "tooltip"
+  href?: string
+  tooltip?: {
+    title: string
+    description?: string
+    image?: string
+  }
+}
+
+interface DescriptionItem {
+  text: string
+  highlights?: Highlight[]
+}
 
 interface ResumeCardProps {
   logoUrl: string
@@ -17,7 +34,8 @@ interface ResumeCardProps {
   href?: string
   badges?: readonly string[]
   period: string
-  description?: string | string[]
+  location?: string
+  description?: string | (string | DescriptionItem)[]
 }
 
 export const ResumeCard = ({
@@ -28,6 +46,7 @@ export const ResumeCard = ({
   href,
   badges,
   period,
+  location,
   description,
 }: ResumeCardProps) => {
   const [isExpanded, setIsExpanded] = React.useState(false)
@@ -39,56 +58,120 @@ export const ResumeCard = ({
     }
   }
 
-  return (
-    <Card className="overflow-hidden transition-all duration-200 hover:shadow-md dark:hover:bg-gray-500/10 mb-3">
-      <div className="p-2.5 sm:p-3">
-        <div className="flex items-start">
-          {/* Logo */}
-          <Avatar className="h-10 w-10 border bg-muted dark:bg-muted/20 flex-shrink-0">
-            <AvatarImage src={logoUrl || "/placeholder.svg"} alt={altText} className="object-contain" />
-            <AvatarFallback className="text-xs">{altText[0]}</AvatarFallback>
-          </Avatar>
+  const renderDescription = () => {
+    if (!description) return null
 
-          {/* Content */}
-          <div className="ml-3 flex-grow">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between w-full">
-              <div className="flex-1 min-w-0 pr-2">
-                <h3 className="font-semibold text-sm truncate">{title}</h3>
-                {subtitle && <p className="text-xs text-muted-foreground truncate">{subtitle}</p>}
-              </div>
-              <div className="text-xs tabular-nums text-muted-foreground whitespace-nowrap flex-shrink-0 mt-0.5 sm:mt-0">
-                {period}
+    if (Array.isArray(description)) {
+      return (
+        <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+          {description.map((point, index) => (
+            <li key={index} className="flex items-start gap-3">
+              <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 mt-2 flex-shrink-0" />
+              <span className="flex-1">
+                {typeof point === "string" ? (
+                  point
+                ) : (
+                  <HighlightedText text={point.text} highlights={point.highlights || []} />
+                )}
+              </span>
+            </li>
+          ))}
+        </ul>
+      )
+    } else {
+      return <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed pb-2">{description}</p>
+    }
+  }
+
+  return (
+    <Card className="group relative overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-gray-200/50 dark:hover:shadow-gray-900/50 border border-gray-200/60 dark:border-gray-700/60 hover:border-gray-300/80 dark:hover:border-gray-600/80 bg-gradient-to-b from-white via-gray-100 to-gray-200 dark:bg-gradient-to-b dark:from-slate-950 dark:via-slate-900 dark:to-slate-800 backdrop-blur-sm mb-4">
+      {/* Subtle gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-50/50 via-transparent to-gray-100/30 dark:from-gray-800/30 dark:via-transparent dark:to-gray-900/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+      <div className="relative p-4 sm:p-5">
+        <div className="flex items-start gap-4">
+          {/* Enhanced Logo */}
+          <div className="relative">
+            <Avatar className="h-12 w-12 rounded-xl border-gray-200/80 dark:border-gray-700/80 bg-white dark:bg-gray-800 shadow-sm group-hover:shadow-md transition-all duration-300 group-hover:scale-105">
+              <AvatarImage src={logoUrl || "/placeholder.svg"} alt={altText} className="object-contain rounded-full p-1" />
+              <AvatarFallback className="text-sm font-semibold bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-800 text-gray-700 dark:text-gray-300">
+                {altText[0]}
+              </AvatarFallback>
+            </Avatar>
+            <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full border-2 border-white dark:border-gray-900 opacity-0 group-hover:opacity-100 transition-all duration-300" />
+          </div>
+
+          {/* Enhanced Content */}
+          <div className="flex-1 min-w-0">
+            <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-2 lg:gap-4">
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center gap-2 mb-1">
+                  <h3 className="font-bold text-base text-gray-900 dark:text-gray-100 truncate">{title}</h3>
+                  {href && (
+                    <Link
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-gray-400 hover:text-blue-500"
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                    </Link>
+                  )}
+                </div>
+                {subtitle && (
+                  <p className="text-sm font-medium text-gray-600 dark:text-gray-400 truncate mb-2">{subtitle}</p>
+                )}
+
+                {/* Enhanced Period and Location */}
+                <div className="flex flex-wrap items-center gap-3 text-xs text-gray-500 dark:text-gray-400">
+                  <div className="flex items-center gap-1">
+                    <Calendar className="w-3 h-3" />
+                    <span className="font-medium">{period}</span>
+                  </div>
+                  {location && (
+                    <div className="flex items-center gap-1">
+                      <MapPin className="w-3 h-3" />
+                      <span>{location}</span>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
 
+            {/* Enhanced Badges */}
             {badges && badges.length > 0 && (
-              <div className="flex flex-wrap gap-1 mt-1.5">
+              <div className="flex flex-wrap gap-1.5 mt-3">
                 {badges.map((badge, index) => (
-                  <Badge variant="secondary" className="text-xs font-normal py-0 px-1.5" key={index}>
+                  <Badge
+                    variant="secondary"
+                    className="text-xs font-medium py-1 px-2.5 bg-gradient-to-r from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-800 text-gray-700 dark:text-gray-300 border border-gray-200/50 dark:border-gray-600/50 hover:from-gray-200 hover:to-gray-300 dark:hover:from-gray-600 dark:hover:to-gray-700 transition-all duration-200"
+                    key={index}
+                  >
                     {badge}
                   </Badge>
                 ))}
               </div>
             )}
-
-            {href && !description && (
-              <Link href={href} className="text-xs text-primary hover:underline mt-1.5 inline-block">
-                View details
-              </Link>
-            )}
           </div>
         </div>
 
+        {/* Enhanced Description Section */}
         {description && (
-          <div onClick={handleClick} className="mt-2 cursor-pointer">
-            <div className="flex items-center justify-between">
-              <Badge variant="outline" className="text-xs cursor-pointer py-0 h-5">
-                {isExpanded ? "Show less" : "Show more"}
+          <div className="mt-4">
+            <div
+              onClick={handleClick}
+              className="flex items-center justify-between cursor-pointer group/expand hover:bg-gray-50/50 dark:hover:bg-gray-800/50 -mx-2 px-2 py-1.5 rounded-lg transition-colors duration-200"
+            >
+              <Badge
+                variant="outline"
+                className="text-xs font-medium py-1 px-3 bg-white/80 dark:bg-gray-800/80 border-gray-300/60 dark:border-gray-600/60 text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700/50 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-200"
+              >
+                {isExpanded ? "Show less" : "Show details"}
               </Badge>
               <ChevronDownIcon
                 className={cn(
-                  "h-3.5 w-3.5 text-muted-foreground transition-transform duration-200",
-                  isExpanded && "rotate-180",
+                  "h-4 w-4 text-gray-400 transition-all duration-300 group-hover/expand:text-gray-600 dark:group-hover/expand:text-gray-300",
+                  isExpanded && "rotate-180 text-gray-600 dark:text-gray-300",
                 )}
               />
             </div>
@@ -100,28 +183,25 @@ export const ResumeCard = ({
                 height: isExpanded ? "auto" : 0,
               }}
               transition={{
-                duration: 0.3,
+                duration: 0.4,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className="mt-2 overflow-hidden"
+              className="overflow-hidden"
             >
-              {Array.isArray(description) ? (
-                <ul className="list-disc pl-4 space-y-0.5 text-xs pb-2">
-                  {description.map((point, index) => (
-                    <li key={index} className="text-xs">
-                      {point}
-                    </li>
-                  ))}
-                </ul>
-              ) : (
-                <p className="text-xs pb-2">{description}</p>
-              )}
-
-              {href && (
-                <Link href={href} className="text-xs text-primary hover:underline inline-block mb-1">
-                  View details
-                </Link>
-              )}
+              <div className="pt-4 pb-2">
+                {renderDescription()}
+                {/* {href && (
+                  <Link
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-sm text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium mt-3 hover:underline transition-colors duration-200"
+                  >
+                    View project details
+                    <ExternalLink className="w-3 h-3" />
+                  </Link>
+                )} */}
+              </div>
             </motion.div>
           </div>
         )}
