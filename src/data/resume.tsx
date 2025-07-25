@@ -32,7 +32,7 @@ export const DATA = {
               title: "IoT Infrastructure Architecture",
               description:
                 "Real-time IoT Device Management System with multi-layered architecture including TCP/HTTP servers, data parsing, and MongoDB integration for seamless device communication.",
-              image: "/IoTArch.png",
+              image: "/iotarch.png",
             },
           },
           {
