@@ -17,7 +17,7 @@ export const DATA = {
     href: "https://www.grid-os.com/",
     badges: ["IoT", "Full-Stack", "DevOps"],
     location: "On-Site",
-    title: "Senior Software Engineer",
+    title: "SDE 1",
     logoUrl: "/GridOS.png",
     start: "February 2025",
     end: "Present",
