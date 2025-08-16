@@ -17,7 +17,7 @@ export const DATA = {
     href: "https://www.grid-os.com/",
     badges: ["IoT", "Full-Stack", "DevOps"],
     location: "On-Site",
-    title: "Senior Software Engineer",
+    title: "SDE-1",
     logoUrl: "/GridOS.png",
     start: "February 2025",
     end: "Present",
@@ -44,13 +44,6 @@ export const DATA = {
       },
       {
         text: "Developed an Electron-based dashboard application for real-time data visualization and device management, improving operational efficiency by 50% and reducing manual monitoring tasks.",
-        // highlights: [
-        //   {
-        //     text: "Electron-based dashboard",
-        //     type: "link" as const,
-        //     href: "https://www.electronjs.org/",
-        //   },
-        // ],
       },
       "Engineered automated in-line quality control testing using serial protocols, achieving 80%+ reliability, and integrated dynamic label generation to streamline production workflows.",
       {
