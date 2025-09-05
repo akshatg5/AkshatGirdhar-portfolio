@@ -1,41 +1,41 @@
-"use client"
+"use client";
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Badge } from "@/components/ui/badge"
-import { Card } from "@/components/ui/card"
-import { cn } from "@/lib/utils"
-import { motion } from "framer-motion"
-import { ChevronDownIcon, ExternalLink, Calendar, MapPin } from "lucide-react"
-import Link from "next/link"
-import React from "react"
-import { HighlightedText } from "./highlighted-text"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
+import { Card } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
+import { ChevronDownIcon, ExternalLink, Calendar, MapPin } from "lucide-react";
+import Link from "next/link";
+import React from "react";
+import { HighlightedText } from "./highlighted-text";
 
 interface Highlight {
-  text: string
-  type: "link" | "tooltip"
-  href?: string
+  text: string;
+  type: "link" | "tooltip";
+  href?: string;
   tooltip?: {
-    title: string
-    description?: string
-    image?: string
-  }
+    title: string;
+    description?: string;
+    image?: string;
+  };
 }
 
 interface DescriptionItem {
-  text: string
-  highlights?: Highlight[]
+  text: string;
+  highlights?: Highlight[];
 }
 
 interface ResumeCardProps {
-  logoUrl: string
-  altText: string
-  title: string
-  subtitle?: string
-  href?: string
-  badges?: readonly string[]
-  period: string
-  location?: string
-  description?: string | (string | DescriptionItem)[]
+  logoUrl: string;
+  altText: string;
+  title: string;
+  subtitle?: string;
+  href?: string;
+  badges?: readonly string[];
+  period: string;
+  location?: string;
+  description?: string | (string | DescriptionItem)[];
 }
 
 export const ResumeCard = ({
@@ -49,17 +49,17 @@ export const ResumeCard = ({
   location,
   description,
 }: ResumeCardProps) => {
-  const [isExpanded, setIsExpanded] = React.useState(false)
+  const [isExpanded, setIsExpanded] = React.useState(false);
 
   const handleClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     if (description) {
-      e.preventDefault()
-      setIsExpanded(!isExpanded)
+      e.preventDefault();
+      setIsExpanded(!isExpanded);
     }
-  }
+  };
 
   const renderDescription = () => {
-    if (!description) return null
+    if (!description) return null;
 
     if (Array.isArray(description)) {
       return (
@@ -71,20 +71,27 @@ export const ResumeCard = ({
                 {typeof point === "string" ? (
                   point
                 ) : (
-                  <HighlightedText text={point.text} highlights={point.highlights || []} />
+                  <HighlightedText
+                    text={point.text}
+                    highlights={point.highlights || []}
+                  />
                 )}
               </span>
             </li>
           ))}
         </ul>
-      )
+      );
     } else {
-      return <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed pb-2">{description}</p>
+      return (
+        <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed pb-2">
+          {description}
+        </p>
+      );
     }
-  }
+  };
 
   return (
-    <Card className="group relative overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-gray-200/50 dark:hover:shadow-gray-900/50 border border-gray-200/60 dark:border-gray-700/60 hover:border-gray-300/80 dark:hover:border-gray-600/80 bg-gradient-to-b from-white via-gray-100 to-gray-200 dark:bg-gradient-to-b dark:from-slate-950 dark:via-slate-900 dark:to-slate-800 backdrop-blur-sm mb-4">
+    <Card onClick={handleClick} className="group cursor-pointer relative overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-gray-200/50 dark:hover:shadow-gray-900/50 border border-gray-200/60 dark:border-gray-700/60 hover:border-gray-300/80 dark:hover:border-gray-600/80 bg-gradient-to-b from-white via-gray-100 to-gray-200 dark:bg-gradient-to-b dark:from-slate-950 dark:via-slate-900 dark:to-slate-800 backdrop-blur-sm mb-4">
       {/* Subtle gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-50/50 via-transparent to-gray-100/30 dark:from-gray-800/30 dark:via-transparent dark:to-gray-900/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
@@ -93,7 +100,11 @@ export const ResumeCard = ({
           {/* Enhanced Logo */}
           <div className="relative">
             <Avatar className="h-12 w-12 rounded-xl border-gray-200/80 dark:border-gray-700/80 bg-white dark:bg-gray-800 shadow-sm group-hover:shadow-md transition-all duration-300 group-hover:scale-105">
-              <AvatarImage src={logoUrl || "/placeholder.svg"} alt={altText} className="object-contain rounded-full p-1" />
+              <AvatarImage
+                src={logoUrl || "/placeholder.svg"}
+                alt={altText}
+                className="object-contain rounded-full p-1"
+              />
               <AvatarFallback className="text-sm font-semibold bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-800 text-gray-700 dark:text-gray-300">
                 {altText[0]}
               </AvatarFallback>
@@ -106,7 +117,9 @@ export const ResumeCard = ({
             <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-2 lg:gap-4">
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-2 mb-1">
-                  <h3 className="font-bold text-base text-gray-900 dark:text-gray-100 truncate">{title}</h3>
+                  <h3 className="font-bold text-base text-gray-900 dark:text-gray-100 truncate">
+                    {title}
+                  </h3>
                   {href && (
                     <Link
                       href={href}
@@ -118,40 +131,29 @@ export const ResumeCard = ({
                     </Link>
                   )}
                 </div>
-                {subtitle && (
-                  <p className="text-sm font-medium text-gray-600 dark:text-gray-400 truncate mb-2">{subtitle}</p>
-                )}
 
                 {/* Enhanced Period and Location */}
-                <div className="flex flex-wrap items-center gap-3 text-xs text-gray-500 dark:text-gray-400">
+                <div className="flex flex-wrap justify-between items-center gap-3 text-xs text-gray-500 dark:text-gray-400">
+                  <div>
+                    {subtitle && (
+                      <p className="text-sm font-medium text-gray-600 dark:text-gray-400 truncate">
+                        {subtitle}
+                      </p>
+                    )}
+                  </div>
                   <div className="flex items-center gap-1">
                     <Calendar className="w-3 h-3" />
-                    <span className="font-medium">{period}</span>
-                  </div>
+                    <span className="font-medium">{period} || </span>
                   {location && (
                     <div className="flex items-center gap-1">
                       <MapPin className="w-3 h-3" />
                       <span>{location}</span>
                     </div>
                   )}
+                  </div>
                 </div>
               </div>
             </div>
-
-            {/* Enhanced Badges */}
-            {badges && badges.length > 0 && (
-              <div className="flex flex-wrap gap-1.5 mt-3">
-                {badges.map((badge, index) => (
-                  <Badge
-                    variant="secondary"
-                    className="text-xs font-medium py-1 px-2.5 bg-gradient-to-r from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-800 text-gray-700 dark:text-gray-300 border border-gray-200/50 dark:border-gray-600/50 hover:from-gray-200 hover:to-gray-300 dark:hover:from-gray-600 dark:hover:to-gray-700 transition-all duration-200"
-                    key={index}
-                  >
-                    {badge}
-                  </Badge>
-                ))}
-              </div>
-            )}
           </div>
         </div>
 
@@ -171,7 +173,7 @@ export const ResumeCard = ({
               <ChevronDownIcon
                 className={cn(
                   "h-4 w-4 text-gray-400 transition-all duration-300 group-hover/expand:text-gray-600 dark:group-hover/expand:text-gray-300",
-                  isExpanded && "rotate-180 text-gray-600 dark:text-gray-300",
+                  isExpanded && "rotate-180 text-gray-600 dark:text-gray-300"
                 )}
               />
             </div>
@@ -207,5 +209,5 @@ export const ResumeCard = ({
         )}
       </div>
     </Card>
-  )
-}
+  );
+};

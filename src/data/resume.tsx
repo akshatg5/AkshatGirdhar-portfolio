@@ -1,15 +1,11 @@
-import { Icons } from "@/components/icons";
-import { HomeIcon, Music, NotebookIcon } from "lucide-react";
 
 export const DATA = {
-  name: "Akshat Girdhar",
+  name: "Hi,I'm Akshat Girdhar",
   initials: "AG",
   url: "https://akshatgirdhar-portfolio.vercel.app/",
   location: "New Delhi, India",
   locationLink: "https://www.google.com/maps/place/delhi",
   description: "Software Engineer.If i'm not coding, I'm either playing or watching some sport.",
-  summary:
-    "Graduated in 2024, have been working with startups since the past 2 years as a full stack developer.I've completed B.Tech in electronics and communications engineering.",
   avatarUrl: "/AkshatGirdhar_img.jpg",
   work : [
   {
@@ -17,7 +13,7 @@ export const DATA = {
     href: "https://www.grid-os.com/",
     badges: ["IoT", "Full-Stack", "DevOps"],
     location: "On-Site",
-    title: "SDE 1",
+    title: "SDE-1",
     logoUrl: "/GridOS.png",
     start: "February 2025",
     end: "Present",
@@ -44,13 +40,6 @@ export const DATA = {
       },
       {
         text: "Developed an Electron-based dashboard application for real-time data visualization and device management, improving operational efficiency by 50% and reducing manual monitoring tasks.",
-        // highlights: [
-        //   {
-        //     text: "Electron-based dashboard",
-        //     type: "link" as const,
-        //     href: "https://www.electronjs.org/",
-        //   },
-        // ],
       },
       "Engineered automated in-line quality control testing using serial protocols, achieving 80%+ reliability, and integrated dynamic label generation to streamline production workflows.",
       {

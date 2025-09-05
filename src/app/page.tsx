@@ -14,15 +14,17 @@ const BLUR_FADE_DELAY = 0.05;
 
 export default function Page() {
   return (
-    <main className="flex flex-col min-h-[100dvh] space-y-10">
+    <main className="flex flex-col min-h-[100dvh]">
       <section id="hero">
-      <Themebutton />
-        <div className="mx-auto w-full max-w-2xl space-y-8">
-          <div className="gap-2 flex justify-between">
-            <div className="flex-col flex flex-1 space-y-1.5">
+        <div className="my-6">
+          <Themebutton />
+        </div>
+        <div className="mx-auto w-full max-w-2xl space-y-5">
+          <div className="gap-2 flex justify-between space-y-5">
+            <div className="flex-col flex flex-1 space-y-2">
               <BlurFadeText
                 delay={BLUR_FADE_DELAY}
-                className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
+                className="text-xl my-4 font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
                 yOffset={8}
                 text={`${DATA.name}`}
               />
@@ -41,17 +43,7 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section id="about">
-        <BlurFade delay={BLUR_FADE_DELAY * 3}>
-          <h2 className="text-xl font-bold">About</h2>
-        </BlurFade>
-        <BlurFade delay={BLUR_FADE_DELAY * 4}>
-          <Markdown className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
-            {DATA.summary}
-          </Markdown>
-        </BlurFade>
-      </section>
-      <section id="work">
+      <section id="work" className="my-6">
         <div className="flex min-h-0 flex-col gap-y-1">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
             <h2 className="text-xl font-bold">Work Experience</h2>
@@ -62,23 +54,24 @@ export default function Page() {
               delay={BLUR_FADE_DELAY * 6 + id * 0.05}
             >
               <ResumeCard
-              key={id}
-              logoUrl={work.logoUrl}
-              altText={work.company}
-              title={work.title}
-              subtitle={work.company}
-              href={work.href}
-              badges={work.badges}
-              period={`${work.start} - ${work.end}`}
-              location={work.location}
-              //@ts-ignore
-              description={work.description}
-            />
+                key={id}
+                logoUrl={work.logoUrl}
+                altText={work.company}
+                title={work.title}
+                subtitle={work.company}
+                href={work.href}
+                badges={work.badges}
+                period={`${work.start} - ${work.end}`}
+                location={work.location}
+                //@ts-ignore
+                description={work.description}
+              />
             </BlurFade>
           ))}
         </div>
       </section>
-      <section id="projects"
+      <section
+        id="projects"
         className="py-16 bg-gradient-to-b from-white dark:from-background via-neutral-200 dark:via-neutral-600 to-black/50 dark:to-white rounded-xl"
       >
         <div className="container mx-auto px-4">

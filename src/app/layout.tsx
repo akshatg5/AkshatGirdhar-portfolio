@@ -17,7 +17,7 @@ const source_code = Source_Code_Pro({
 export const metadata: Metadata = {
   metadataBase: new URL(DATA.url),
   title: {
-    default: DATA.name,
+    default: "Akshat Girdhar",
     template: `%s | ${DATA.name}`,
   },
   description: DATA.description,
@@ -68,7 +68,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={cn("min-h-screen bg-background text-foreground antialiased max-w-2xl mx-auto py-12 sm:py-24 px-6",source_code.className)}>
+        className={cn("min-h-screen bg-background text-foreground antialiased max-w-2xl mx-auto py-8",source_code.className)}>
         <Analytics />
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <TooltipProvider delayDuration={0}>
