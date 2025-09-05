@@ -16,12 +16,15 @@ export default function Page() {
   return (
     <main className="flex flex-col min-h-[100dvh]">
       <section id="hero">
-        <div className="mx-auto w-full max-w-2xl space-y-1">
-          <div className="gap-2 flex justify-between space-y-1">
-            <div className="flex-col flex flex-1 space-y-1.5">
+        <div className="my-6">
+          <Themebutton />
+        </div>
+        <div className="mx-auto w-full max-w-2xl space-y-5">
+          <div className="gap-2 flex justify-between space-y-5">
+            <div className="flex-col flex flex-1 space-y-2">
               <BlurFadeText
                 delay={BLUR_FADE_DELAY}
-                className="text-2xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
+                className="text-xl my-4 font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
                 yOffset={8}
                 text={`${DATA.name}`}
               />
@@ -30,9 +33,6 @@ export default function Page() {
                 delay={BLUR_FADE_DELAY}
                 text={DATA.description}
               />
-            </div>
-            <div className="my-2">
-              <Themebutton />
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
               <Avatar className="size-28 border">
@@ -43,17 +43,7 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section id="about">
-        <BlurFade delay={BLUR_FADE_DELAY * 3}>
-          <h2 className="text-xl font-bold">About</h2>
-        </BlurFade>
-        <BlurFade delay={BLUR_FADE_DELAY * 4}>
-          <Markdown className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
-            {DATA.summary}
-          </Markdown>
-        </BlurFade>
-      </section>
-      <section id="work">
+      <section id="work" className="my-6">
         <div className="flex min-h-0 flex-col gap-y-1">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
             <h2 className="text-xl font-bold">Work Experience</h2>

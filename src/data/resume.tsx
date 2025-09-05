@@ -1,15 +1,11 @@
-import { Icons } from "@/components/icons";
-import { HomeIcon, Music, NotebookIcon } from "lucide-react";
 
 export const DATA = {
-  name: "Akshat Girdhar",
+  name: "Hi,I'm Akshat Girdhar",
   initials: "AG",
   url: "https://akshatgirdhar-portfolio.vercel.app/",
   location: "New Delhi, India",
   locationLink: "https://www.google.com/maps/place/delhi",
   description: "Software Engineer.If i'm not coding, I'm either playing or watching some sport.",
-  summary:
-    "Graduated in 2024, have been working with startups since the past 2 years as a full stack developer.I've completed B.Tech in electronics and communications engineering.",
   avatarUrl: "/AkshatGirdhar_img.jpg",
   work : [
   {

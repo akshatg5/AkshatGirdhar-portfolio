@@ -17,7 +17,7 @@ const source_code = Source_Code_Pro({
 export const metadata: Metadata = {
   metadataBase: new URL(DATA.url),
   title: {
-    default: DATA.name,
+    default: "Akshat Girdhar",
     template: `%s | ${DATA.name}`,
   },
   description: DATA.description,

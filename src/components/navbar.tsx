@@ -40,11 +40,11 @@ export function Appbar() {
       icon: <Twitter className="text-black dark:text-neutral-300" />,
       href: "https://x.com/AkshatGirdhar2",
     },
-    {
-      title: "Buy me a Cofee",
-      icon: <CoffeeIcon className="text-black dark:text-neutral-300" />,
-      href: "https://www.buymeacoffee.com/akshatg5",
-    },
+    // {
+    //   title: "Buy me a Cofee",
+    //   icon: <CoffeeIcon className="text-black dark:text-neutral-300" />,
+    //   href: "https://www.buymeacoffee.com/akshatg5",
+    // },
   ];
 
   return (
