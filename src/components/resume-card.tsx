@@ -91,7 +91,10 @@ export const ResumeCard = ({
   };
 
   return (
-    <Card onClick={handleClick} className="group cursor-pointer relative overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-gray-200/50 dark:hover:shadow-gray-900/50 border border-gray-200/60 dark:border-gray-700/60 hover:border-gray-300/80 dark:hover:border-gray-600/80 bg-gradient-to-b from-white via-gray-100 to-gray-200 dark:bg-gradient-to-b dark:from-slate-950 dark:via-slate-900 dark:to-slate-800 backdrop-blur-sm mb-4">
+    <Card
+      onClick={handleClick}
+      className="group cursor-pointer relative overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-gray-200/50 dark:hover:shadow-gray-900/50  hover:border-gray-300/80 dark:hover:border-gray-600/80 bg-gradient-to-b from-white via-gray-100 to-gray-200 dark:bg-gradient-to-b dark:from-slate-950 dark:via-slate-900 dark:to-black backdrop-blur-sm mb-4"
+    >
       {/* Subtle gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-50/50 via-transparent to-gray-100/30 dark:from-gray-800/30 dark:via-transparent dark:to-gray-900/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
@@ -105,7 +108,7 @@ export const ResumeCard = ({
                 alt={altText}
                 className="object-contain rounded-full p-1"
               />
-              <AvatarFallback className="text-sm font-semibold bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-800 text-gray-700 dark:text-gray-300">
+              <AvatarFallback className="text-sm font-semibold bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-800 text-gray-700 dark:text-white">
                 {altText[0]}
               </AvatarFallback>
             </Avatar>
@@ -117,7 +120,7 @@ export const ResumeCard = ({
             <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-2 lg:gap-4">
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-2 mb-1">
-                  <h3 className="font-bold text-base text-gray-900 dark:text-gray-100 truncate">
+                  <h3 className="font-bold text-base text-gray-900 dark:text-white truncate">
                     {title}
                   </h3>
                   {href && (
@@ -136,20 +139,20 @@ export const ResumeCard = ({
                 <div className="flex flex-wrap justify-between items-center gap-3 text-xs text-gray-500 dark:text-gray-400">
                   <div>
                     {subtitle && (
-                      <p className="text-sm font-medium text-gray-600 dark:text-gray-400 truncate">
+                      <p className="text-sm font-medium text-gray-600 dark:text-white truncate">
                         {subtitle}
                       </p>
                     )}
                   </div>
                   <div className="flex items-center gap-1">
                     <Calendar className="w-3 h-3" />
-                    <span className="font-medium">{period} || </span>
-                  {location && (
-                    <div className="flex items-center gap-1">
-                      <MapPin className="w-3 h-3" />
-                      <span>{location}</span>
-                    </div>
-                  )}
+                    <span className="font-medium dark:text-white">{period} || </span>
+                    {location && (
+                      <div className="flex items-center gap-1">
+                        <MapPin className="w-3 h-3 dark:text-white" />
+                        <span className="dark:text-white">{location}</span>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>

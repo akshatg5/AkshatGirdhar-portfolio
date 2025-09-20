@@ -2,15 +2,13 @@
 import React from "react";
 import { IconBrandGithub, IconHome } from "@tabler/icons-react";
 import {
+  BookOpenIcon,
   CoffeeIcon,
   LinkedinIcon,
-  LucideLaptop,
   PaperclipIcon,
   Twitter,
   X,
 } from "lucide-react";
-import Link from "next/link";
-import Image from "next/image";
 import { FloatingDock } from "./ui/floating-dock";
 
 export function Appbar() {
@@ -19,6 +17,11 @@ export function Appbar() {
       title: "Home",
       icon: <IconHome className="text-black dark:text-neutral-300" />,
       href: "/",
+    },
+    {
+      title: "Blog",
+      icon: <BookOpenIcon className="text-black dark:text-neutral-300" />,
+      href: "/blog",
     },
     {
       title: "Resume",
