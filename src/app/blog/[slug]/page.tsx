@@ -33,30 +33,64 @@ export async function generateMetadata({
     summary: description,
     image,
   } = post.metadata;
+  
+  // Use the correct domain and ensure OG image works
+  const baseUrl = "https://www.akshatgirdhar.com";
   const ogImage = image
-    ? `https://akshatgirdhar.vercel.app${image}`
-    : `https://akshatgirdhar.vercel.app/og?title=${title}`;
+    ? `${baseUrl}${image}`
+    : `${baseUrl}/PortfolioOg.png`; // Use the existing portfolio OG image as fallback
 
   return {
-    title,
+    title: `${title} | Akshat Girdhar`,
     description,
+    authors: [{ name: "Akshat Girdhar" }],
+    creator: "Akshat Girdhar",
+    publisher: "Akshat Girdhar",
+    formatDetection: {
+      email: false,
+      address: false,
+      telephone: false,
+    },
+    metadataBase: new URL(baseUrl),
+    alternates: {
+      canonical: `/blog/${post.slug}`,
+    },
     openGraph: {
       title,
       description,
       type: "article",
       publishedTime,
-      url: `https://akshatgirdhar.vercel.app/blog/${post.slug}`,
+      authors: ["Akshat Girdhar"],
+      url: `${baseUrl}/blog/${post.slug}`,
+      siteName: "Akshat Girdhar",
       images: [
         {
           url: ogImage,
+          width: 1200,
+          height: 630,
+          alt: title,
         },
       ],
+      locale: "en_US",
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
       images: [ogImage],
+      creator: "@akshatg5",
+      site: "@akshatg5",
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
     },
   };
 }
