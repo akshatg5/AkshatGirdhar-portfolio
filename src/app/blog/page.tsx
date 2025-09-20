@@ -7,8 +7,32 @@ import { formatDate } from "@/lib/utils";
 const BLUR_FADE_DELAY = 0.05;
 
 export const metadata = {
-  title: "Blog",
+  title: "Blog | Akshat Girdhar",
   description: "My thoughts on software development, life, and more.",
+  openGraph: {
+    title: "Blog | Akshat Girdhar",
+    description: "My thoughts on software development, life, and more.",
+    type: "website",
+    url: "https://www.akshatgirdhar.com/blog",
+    siteName: "Akshat Girdhar",
+    images: [
+      {
+        url: "https://www.akshatgirdhar.com/PortfolioOg.png",
+        width: 1200,
+        height: 630,
+        alt: "Akshat Girdhar's Blog",
+      },
+    ],
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Blog | Akshat Girdhar",
+    description: "My thoughts on software development, life, and more.",
+    images: ["https://www.akshatgirdhar.com/PortfolioOg.png"],
+    creator: "@akshatg5",
+    site: "@akshatg5",
+  },
 };
 
 export default async function BlogPage() {
