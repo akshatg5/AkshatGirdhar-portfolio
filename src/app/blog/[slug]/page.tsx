@@ -79,34 +79,34 @@ export default async function BlogPost({
   }
 
   return (
-    <div className="flex flex-col min-h-[100dvh] space-y-8">
+    <div className="flex flex-col min-h-[100dvh] space-y-6 sm:space-y-8 px-4 sm:px-6 max-w-4xl mx-auto">
       <BlurFade delay={BLUR_FADE_DELAY}>
         <Link
           href="/blog"
-          className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+          className="inline-flex items-center gap-2 text-xs sm:text-sm text-muted-foreground hover:text-foreground transition-colors mt-4 sm:mt-6"
         >
-          <ArrowLeft className="h-4 w-4" />
+          <ArrowLeft className="h-3 w-3 sm:h-4 sm:w-4" />
           Back to blog
         </Link>
       </BlurFade>
 
-      <div className="space-y-2">
-        <div className="space-y-2">
+      <div className="space-y-3 sm:space-y-4">
+        <div className="space-y-2 sm:space-y-3">
           <BlurFadeText
             delay={BLUR_FADE_DELAY * 2}
-            className="text-3xl font-bold tracking-tighter"
+            className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold tracking-tighter leading-tight"
             yOffset={8}
             text={post.metadata.title}
           />
           <BlurFade delay={BLUR_FADE_DELAY * 2.5}>
-            <p className="text-muted-foreground">
+            <p className="text-xs sm:text-sm text-muted-foreground">
               {formatDate(post.metadata.publishedAt)}
             </p>
           </BlurFade>
         </div>
         {post.metadata.summary && (
           <BlurFade delay={BLUR_FADE_DELAY * 3}>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
               {post.metadata.summary}
             </p>
           </BlurFade>
@@ -114,7 +114,7 @@ export default async function BlogPost({
       </div>
 
       <BlurFade delay={BLUR_FADE_DELAY * 4}>
-        <article className="prose prose-neutral dark:prose-invert max-w-none">
+        <article className="prose prose-neutral dark:prose-invert prose-sm sm:prose-base lg:prose-lg max-w-none prose-headings:leading-tight prose-p:leading-relaxed">
           <div dangerouslySetInnerHTML={{ __html: post.source }} />
         </article>
       </BlurFade>
