@@ -15,17 +15,17 @@ export default async function BlogPage() {
   const posts = await getBlogPosts();
 
   return (
-    <div className="flex flex-col">
-      <div className="mt-10 mb-12">
+    <div className="flex flex-col px-4 sm:px-6 max-w-4xl mx-auto">
+      <div className="mt-6 sm:mt-10 mb-8 sm:mb-12">
         <BlurFadeText
           delay={BLUR_FADE_DELAY}
-          className="text-2xl font-bold tracking-tighter"
+          className="text-xl sm:text-2xl lg:text-3xl font-bold tracking-tighter"
           yOffset={8}
           text="blog"
         />
       </div>
 
-      <div className="space-y-8">
+      <div className="space-y-6 sm:space-y-8">
         {posts
           .sort((a, b) => {
             if (
@@ -39,13 +39,13 @@ export default async function BlogPage() {
             <BlurFade delay={BLUR_FADE_DELAY * 2 + id * 0.05} key={post.slug}>
               <Link
                 href={`/blog/${post.slug}`}
-                className="block group"
+                className="block group p-4 sm:p-6 rounded-lg hover:bg-muted/50 transition-colors"
               >
                 <article>
-                  <h2 className="text-lg font-medium group-hover:text-muted-foreground transition-colors">
+                  <h2 className="text-base sm:text-lg lg:text-xl font-medium group-hover:text-muted-foreground transition-colors leading-tight">
                     {post.metadata.title}
                   </h2>
-                  <p className="text-sm text-muted-foreground mt-1">
+                  <p className="text-xs sm:text-sm text-muted-foreground mt-2">
                     {formatDate(post.metadata.publishedAt)}
                   </p>
                 </article>
@@ -56,8 +56,8 @@ export default async function BlogPage() {
 
       {posts.length === 0 && (
         <BlurFade delay={BLUR_FADE_DELAY * 2}>
-          <div className="text-center py-12">
-            <p className="text-muted-foreground">No blog posts yet.</p>
+          <div className="text-center py-8 sm:py-12">
+            <p className="text-muted-foreground text-sm sm:text-base">No blog posts yet.</p>
           </div>
         </BlurFade>
       )}
