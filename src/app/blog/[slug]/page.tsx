@@ -78,8 +78,8 @@ export async function generateMetadata({
       title,
       description,
       images: [ogImage],
-      creator: "@akshatg5",
-      site: "@akshatg5",
+      creator: "@AkshatGirdhar2",
+      site: "https://akshatgirdhar.com",
     },
     robots: {
       index: true,
