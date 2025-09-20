@@ -2,10 +2,11 @@
 export const DATA = {
   name: "Hi,I'm Akshat Girdhar",
   initials: "AG",
-  url: "https://akshatgirdhar-portfolio.vercel.app/",
+  url: "https://akshatgirdhar.com",
   location: "New Delhi, India",
   locationLink: "https://www.google.com/maps/place/delhi",
-  description: "Software Engineer.If i'm not coding, I'm either playing or watching some sport.",
+  description: "Software Engineer || Sports Buff",
+  about : "Based out of Delhi,India. 23. I like software engineering,finance and sport.",
   avatarUrl: "/AkshatGirdhar_img.jpg",
   work : [
   {

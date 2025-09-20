@@ -19,20 +19,30 @@ export default function Page() {
         <div className="my-6">
           <Themebutton />
         </div>
-        <div className="mx-auto w-full max-w-2xl space-y-5">
-          <div className="gap-2 flex justify-between space-y-5">
-            <div className="flex-col flex flex-1 space-y-2">
+        <div className="mx-auto w-full max-w-2xl space-y-4">
+          <div className="gap-2 flex justify-between space-y-2">
+            <div className="flex-col flex flex-1 space-y-4">
               <BlurFadeText
                 delay={BLUR_FADE_DELAY}
-                className="text-xl my-4 font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
+                className="text-md mt-10 mb-1 font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
                 yOffset={8}
                 text={`${DATA.name}`}
               />
               <BlurFadeText
-                className="max-w-[600px] md:text-xl"
+                className="max-w-[600px] text-xl"
                 delay={BLUR_FADE_DELAY}
                 text={DATA.description}
               />
+              <Link href="/blog" className="text-primary my-2 hover:underline">I write about my work,sometimes! Check it out here!</Link>
+
+              <div className="mt-8">
+                <h2 className="mb-2">About Me: </h2>
+                <BlurFadeText
+                  className="max-w-[600px] py-2 text-md"
+                  delay={BLUR_FADE_DELAY}
+                  text={DATA.about}
+                />
+              </div>
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
               <Avatar className="size-28 border">
@@ -43,7 +53,7 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section id="work" className="my-6">
+      <section id="work" className="my-2">
         <div className="flex min-h-0 flex-col gap-y-1">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
             <h2 className="text-xl font-bold">Work Experience</h2>
@@ -79,7 +89,7 @@ export default function Page() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-6">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-primary text-primary-foreground px-3 py-1 text-sm font-medium">
-                  Proof Of Work
+                  Proof of Work
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                   Check out my Projects

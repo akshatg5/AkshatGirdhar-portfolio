@@ -1,0 +1,20 @@
+---
+title: "Making my first C-erver"
+publishedAt: "2025-03-25"
+summary: "Tried making an HTTP server in C"
+---
+
+Started learning C a week ago\!
+
+![Code Snippet](/C-server.png)
+
+Coming from the world of JS/TS, a low-level language seems daunting, but once you start to wrap your brain around concepts and how the code works, everything starts to make sense.
+
+**C** gives you a lot more freedom compared to **JavaScript**. It actually lets you decide how you want to implement things. The fact that you’re not just an `npm install` away from installing any library to perform a specific task really forces you to write a lot more code yourself. But this is great since you actually start to understand how things work under the hood.
+
+After implementing a couple of small applications like a CLI calculator, I wanted to work with **HTTP servers** — something Express (Node.js library) makes super easy to implement. However, when you want to do the same in a low-level language like C, it comes with its own set of challenges — from learning about TCP servers, sockets, and IPv4 addresses to dealing with Windows-specific APIs to interact with sockets. (Yup, I haven’t moved to Linux yet. :( )
+
+Since I’m just starting, if you’re a seasoned C developer, please let me know where I might be lacking or what I should work on. I’m always up for a conversation on tech.
+
+Attached is the codebase for a single-threaded HTTP server implemented in C, which only exposes a GET endpoint as of now\!
+[https://github.com/akshatg5/http-server-in-c](https://github.com/akshatg5/http-server-in-c)
