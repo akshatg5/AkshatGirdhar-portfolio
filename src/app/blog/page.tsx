@@ -16,7 +16,7 @@ export default async function BlogPage() {
 
   return (
     <div className="flex flex-col px-4 sm:px-6 max-w-4xl mx-auto">
-      <div className="mt-6 sm:mt-10 mb-8 sm:mb-12">
+      <div className="mt-6 sm:mt-10 mb-6 sm:mb-8">
         <BlurFadeText
           delay={BLUR_FADE_DELAY}
           className="text-xl sm:text-2xl lg:text-3xl font-bold tracking-tighter"
@@ -25,7 +25,7 @@ export default async function BlogPage() {
         />
       </div>
 
-      <div className="space-y-6 sm:space-y-8">
+      <div className="space-y-2 sm:space-y-4">
         {posts
           .sort((a, b) => {
             if (
