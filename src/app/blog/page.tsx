@@ -30,8 +30,8 @@ export const metadata = {
     title: "Blog | Akshat Girdhar",
     description: "My thoughts on software development, life, and more.",
     images: ["https://www.akshatgirdhar.com/PortfolioOg.png"],
-    creator: "@akshatg5",
-    site: "@akshatg5",
+    creator: "@AkshatGirdhar2",
+    site: "https://akshatgirdhar.com",
   },
 };
 

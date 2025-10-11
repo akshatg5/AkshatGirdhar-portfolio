@@ -33,12 +33,10 @@ export async function generateMetadata({
     summary: description,
     image,
   } = post.metadata;
-  
+
   // Use the correct domain and ensure OG image works
   const baseUrl = "https://www.akshatgirdhar.com";
-  const ogImage = image
-    ? `${baseUrl}${image}`
-    : `${baseUrl}/PortfolioOg.png`; // Use the existing portfolio OG image as fallback
+  const ogImage = image ? `${baseUrl}${image}` : `${baseUrl}/PortfolioOg.png`; // Use the existing portfolio OG image as fallback
 
   return {
     title: `${title} | Akshat Girdhar`,
@@ -78,8 +76,8 @@ export async function generateMetadata({
       title,
       description,
       images: [ogImage],
-      creator: "@akshatg5",
-      site: "@akshatg5",
+      creator: "@AkshatGirdhar2",
+      site: "https://akshatgirdhar.com",
     },
     robots: {
       index: true,
@@ -152,6 +150,21 @@ export default async function BlogPost({
           <div dangerouslySetInnerHTML={{ __html: post.source }} />
         </article>
       </BlurFade>
+
+      <div className="my-4">
+        <p>If you liked the blog, do consider:</p>
+        <a
+          href="https://www.buymeacoffee.com/akshatg5"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="https://cdn.buymeacoffee.com/buttons/v2/arial-yellow.png"
+            alt="Buy Me A Coffee"
+            style={{ height: "60px", width: "217px" }}
+          />
+        </a>
+      </div>
     </div>
   );
 }
