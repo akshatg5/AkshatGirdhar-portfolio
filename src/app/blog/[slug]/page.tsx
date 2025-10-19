@@ -151,7 +151,7 @@ export default async function BlogPost({
         </article>
       </BlurFade>
 
-      <div className="my-4">
+      <div className="my-4 z-50">
         <p>If you liked the blog, do consider:</p>
         <a
           href="https://www.buymeacoffee.com/akshatg5"
