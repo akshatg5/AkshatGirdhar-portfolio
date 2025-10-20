@@ -4,6 +4,7 @@ import { IconBrandGithub, IconHome } from "@tabler/icons-react";
 import {
   BookOpenIcon,
   CoffeeIcon,
+  GlobeIcon,
   LinkedinIcon,
   PaperclipIcon,
   Twitter,
@@ -22,6 +23,11 @@ export function Appbar() {
       title: "Blog",
       icon: <BookOpenIcon className="text-black dark:text-neutral-300" />,
       href: "/blog",
+    },
+    {
+      title: "Projects",
+      icon: <GlobeIcon className="text-black dark:text-neutral-300" />,
+      href: "/projects",
     },
     {
       title: "Resume",

@@ -104,9 +104,11 @@ export default function Page() {
                 <div className="inline-block rounded-lg bg-primary text-primary-foreground px-3 py-1 text-xs sm:text-sm font-medium">
                   Proof of Work
                 </div>
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tighter leading-tight">
+                <Link href='/projects'>
+                <h2 className="text-2xl hover:underline sm:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tighter leading-tight">
                   Check out my Projects
                 </h2>
+                </Link>
               </div>
             </div>
           </BlurFade>
