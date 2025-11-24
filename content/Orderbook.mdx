@@ -1,0 +1,76 @@
+---
+title: "How to create a Limit Order book?"
+summary: "For all the fintech nerds out there! Setting up a complete Limit order book setup in python - trying to reach as close to O(1) time complexity as possible"
+publishedAt: "2025-11-25"
+---
+
+## What is a Limit Order Book?
+
+But first, What is a Limit Order? When you go to your favority exchange like Zerodha or Groww and place an order, you are placing a market order, you don't decide what price to choose, you go to the exchange UI and hit BUY.
+But there is another way to do this as well, what if the current price of the share is 100rs and you want to buy at 98rs and you are confident that the share will come down to 98 - you place a Limit order - a limit order gives the investor the control to decide the Buy or Sell price that they want to choose. 
+
+A **Limit Order Book** is a 2 sided-record - buy side and sell side- that aggregates orders by price level.
+There are bids and asks here,
+1. Bid Side ( Buy Orders ) : This side lists all the buy orders - How much is someone who wants to buy a stock willing to pay?
+- We need to maximise this. 
+- Bids are sorted from highest to lowest price. 
+- **Highest Bid** is the best bid.
+
+2. Ask Side ( Sell Orders ) : This side lists all the sell orders - how much is someone willing to sell a stock for?
+- We need to minimise this.
+- Asks are sorted from lowest to highest price.
+- **Lowest Ask** is the best ask. 
+
+Order matching engine - A **Trade** occurs when an incoming order matches an existing limit order on the book, condition to match is that buy price is greater than or equal to the sell price. 
+
+Price-Time Priority : When an order comes in the book and is not immidiately matched - it is placed in a queue, Orders are then prioritized on:
+1. Price Priority : Orders with better price ( highest bid, lowest ask) are placed ahead.
+2. Time Priority : If multiple orders are at the same price, the order that was placed first will be given priority.
+
+## How did I create my own version of a Limit Order Book?
+My language of choice for this project is Python - simply because you already get a lot of pre-existing libraries and functions that will make it easier and faster to complete the development process.
+
+We will start by defining the data-structure used in the project : 
+
+1. Order : 
+```
+class Order:
+    order_id: str # identifier
+    side: OrderSide  # BUY=1, SELL=-1
+    price: float # the price at which stock was bought or sold
+    quantity: int  # remaining quantity
+    timestamp: datetime
+    original_quantity: int = 0  # total original quantity
+    traded_quantity: int = 0  
+    average_traded_price: float = 0.0
+    total_traded_value: float = 0.0
+```
+
+2. Trade : When a buy and sell order are correctly matched -> it is considered a successful trade:
+```
+class Trade:
+    trade_id: str
+    execution_timestamp: datetime
+   
+```
+
+3. Price Level : we group all the orders by Price Level 
+```
+class PriceLevel:
+    price: float
+    orders: deque = deque()  # FIFO queue of orders
+```
+
+4. Orderbook structure:
+```
+class OrderBook:
+    bids: SortedDict = SortedDict(lambda x: -x)  # descending prices (best bid first)
+    asks: SortedDict = SortedDict()              # ascending prices (best ask first)
+    orders: Dict[str, Order] = {}                # O(1) order lookup by ID
+    trades: List[Trade] = []                     # all executed trades
+```
+- Using SortedDicts for Price Levels to ensure that we get O(1) time complexity to access the best prices.
+- O(logn) for insertion/deletions.
+
+I created the complete Orderbook Class instance and exposed it via an HTTP interface ( FastAPI ) to actually build a frontend on top for the users so that they can play around with it.
+
