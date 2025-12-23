@@ -76,6 +76,49 @@ const projects = [
     video: "",
   },
   {
+    title: "SupportBot AI",
+    href: "https://ai-customer-support-agent-frontend.vercel.app/",
+    dates: "",
+    active: true,
+    description:
+      "Minimal AI Customer Support Agent with Openrouter LLM Integration.",
+    technologies: [
+      "Node.js",
+      "Typescript",
+      "React.js",
+      "Openrouter",
+      "MongoDB",
+      "TailwindCSS",
+    ],
+    links: [
+      {
+        type: "Website",
+        href: "https://ai-customer-support-agent-frontend.vercel.app/",
+        icon: <Icons.globe className="size-3" />,
+      },
+    ],
+    image: "/CustomerApp.png",
+    video: "",
+  },
+  {
+    title: "Reorganised",
+    href: "https://www.reorganised.in/",
+    dates: "",
+    active: true,
+    description:
+      "A product for real-estate brokers - Streamline your property business with our all-in-one platform. Manage listings, nurture leads, and close deals faster than ever.",
+    technologies: ["Supabase", "Typescript", "React.js", "SQL"],
+    links: [
+      {
+        type: "Website",
+        href: "https://ai-customer-support-agent-frontend.vercel.app/",
+        icon: <Icons.globe className="size-3" />,
+      },
+    ],
+    image: "/Reorganised.png",
+    video: "",
+  },
+  {
     title: "Learn-Lens",
     href: "https://learn-lens.vercel.app/",
     dates: "",
