@@ -119,6 +119,24 @@ const projects = [
     video: "",
   },
   {
+    title: "WebRtc-Demo",
+    href: "https://web-rtc-basics.vercel.app",
+    dates: "",
+    active: true,
+    description:
+      "A simple implementation showcasing how webrtc works at a p2p level.",
+    technologies: ["HTML", "Javascript", "WebRtc", "CSS"],
+    links: [
+      {
+        type: "Website",
+        href: "https://web-rtc-basics.vercel.app/",
+        icon: <Icons.globe className="size-3" />,
+      },
+    ],
+    image: "/WebRtc.png",
+    video: "",
+  },
+  {
     title: "Learn-Lens",
     href: "https://learn-lens.vercel.app/",
     dates: "",
