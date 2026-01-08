@@ -20,7 +20,7 @@ export const DATA = {
       end: "Present",
       description: [
         {
-          text: "Architected and implemented a scalable IoT infrastructure with TCP/HTTP servers and Docker containerization, serving 10,000+ connected devices with 99.9% uptime.",
+          text: "Architected and implemented a scalable IoT infrastructure with TCP/HTTP servers and Docker containerization.",
           highlights: [
             {
               text: "scalable IoT infrastructure",
