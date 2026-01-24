@@ -42,9 +42,12 @@ export const DATA = {
         {
           text: "Developed an Electron-based dashboard application for real-time data visualization and device management, improving operational efficiency by 50% and reducing manual monitoring tasks.",
         },
-        "Engineered automated in-line quality control testing using serial protocols, achieving 80%+ reliability, and integrated dynamic label generation to streamline production workflows.",
         {
-          text: "Led end to end firmware development of a government standard GPS Device following the AIS140, implementing multiple modules like Power Section, TCP Connection, GPIO interactions, Networking features like SMS, Tracking capabikities using GNSS data from GPS Module.",
+          text: "Developed a mock UPI payment platform leveraging MQTT-based event handling to facilitate end-to-end testing and deliver seamless, interactive product demos with QR-Boxes.",
+        },
+        "Engineered automated in-line quality control testing application using UART communication, achieving 80%+ reliability, and integrated dynamic label generation to streamline production workflows.",
+        {
+          text: "Led end to end firmware development of a government standard GPS Device following the AIS140 and GT06 Protocols, implementing multiple modules like Power Section, TCP Connection, GPIO interactions, Networking features like SMS, Tracking capabilities using GNSS data from GPS Module.",
           highlights: [
             {
               text: "GPS device firmware",
@@ -57,7 +60,7 @@ export const DATA = {
             },
           ],
         },
-        "Leveraged diverse technology stack including Node.js, React.js, Tailwind CSS, AWS, Docker, C, Python, and Electron to deliver end-to-end solutions.",
+        "Leveraged diverse technology stack including Node.js, React.js, Tailwind CSS, AWS, Docker, C, Python, and Electron to deliver end-to-end solutions. Worked on multiple modules like Espressif Series to contribute to GPS devices",
       ],
     },
     {
