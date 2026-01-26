@@ -6,12 +6,13 @@ import type { Metadata } from "next";
 import { Source_Code_Pro } from "next/font/google";
 import "./globals.css";
 import { Appbar } from "@/components/navbar";
-import { Analytics } from '@vercel/analytics/next';
+import { Analytics } from "@vercel/analytics/next";
+import { PostHogProvider } from "./providers";
 
 const source_code = Source_Code_Pro({
   subsets: ["latin"],
-  weight : '400',
-  variable : "--font-source-code-pro"
+  weight: "400",
+  variable: "--font-source-code-pro",
 });
 
 export const metadata: Metadata = {
@@ -68,14 +69,20 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={cn("min-h-screen bg-background text-foreground antialiased max-w-2xl mx-auto py-8",source_code.className)}>
-        <Analytics />
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
-          <TooltipProvider delayDuration={0}>
-            {children}
-            <Appbar />
-          </TooltipProvider>
-        </ThemeProvider>
+        className={cn(
+          "min-h-screen bg-background text-foreground antialiased max-w-2xl mx-auto py-8",
+          source_code.className,
+        )}
+      >
+        <PostHogProvider>
+          <Analytics />
+          <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+            <TooltipProvider delayDuration={0}>
+              {children}
+              <Appbar />
+            </TooltipProvider>
+          </ThemeProvider>
+        </PostHogProvider>
       </body>
     </html>
   );
