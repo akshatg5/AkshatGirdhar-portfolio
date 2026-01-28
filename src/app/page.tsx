@@ -6,6 +6,7 @@ import { Themebutton } from "@/components/theme-button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import projects from "@/data/projects";
 import { DATA } from "@/data/resume";
+import { PaperclipIcon } from "lucide-react";
 import Link from "next/link";
 
 const BLUR_FADE_DELAY = 0.05;
@@ -31,15 +32,17 @@ export default function Page() {
                 delay={BLUR_FADE_DELAY}
                 text={DATA.description}
               />
-              <Link 
-                href="/blog" 
+              <Link
+                href="/blog"
                 className="text-primary text-sm sm:text-base my-2 hover:underline transition-all duration-200 hover:text-primary/80 inline-block"
               >
                 I write about my work, sometimes! Check it out here!
               </Link>
 
               <div className="mt-6 sm:mt-8">
-                <h2 className="mb-3 text-lg sm:text-xl font-semibold">About Me:</h2>
+                <h2 className="mb-3 text-lg sm:text-xl font-semibold">
+                  About Me:
+                </h2>
                 <BlurFadeText
                   className="py-2 text-sm sm:text-base lg:text-lg leading-relaxed text-muted-foreground"
                   delay={BLUR_FADE_DELAY}
@@ -65,7 +68,9 @@ export default function Page() {
         <div className="mx-auto w-full max-w-2xl">
           <div className="flex min-h-0 flex-col gap-y-3 sm:gap-y-4">
             <BlurFade delay={BLUR_FADE_DELAY * 5}>
-              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-2">Work Experience</h2>
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-2">
+                Work Experience
+              </h2>
             </BlurFade>
             <div className="space-y-3 sm:space-y-4">
               {DATA.work.map((work, id) => (
@@ -104,10 +109,10 @@ export default function Page() {
                 <div className="inline-block rounded-lg bg-primary text-primary-foreground px-3 py-1 text-xs sm:text-sm font-medium">
                   Proof of Work
                 </div>
-                <Link href='/projects'>
-                <h2 className="text-2xl hover:underline sm:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tighter leading-tight">
-                  Check out my Projects
-                </h2>
+                <Link href="/projects">
+                  <h2 className="text-2xl hover:underline sm:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tighter leading-tight">
+                    Check out my Projects
+                  </h2>
                 </Link>
               </div>
             </div>
@@ -119,6 +124,16 @@ export default function Page() {
           </BlurFade>
         </div>
       </section>
+
+      <Link
+        href="/resume"
+        className="text-primary flex space-x-2 text-sm sm:text-base my-2 hover:underline transition-all duration-200 hover:text-primary/80 inline-block"
+      >
+        <PaperclipIcon className="text-black  dark:text-neutral-300" />
+        <span className="underline cursor-pointer text-black dark:text-white">
+          My Resume!
+        </span>
+      </Link>
 
       <footer className="w-full mx-4 sm:mx-6 lg:mx-8 rounded-xl dark:bg-gray-800 bg-gray-50 py-6 px-4 sm:px-6 lg:px-8 mt-8">
         <div className="max-w-6xl mx-auto flex flex-col items-center justify-center space-y-2">
